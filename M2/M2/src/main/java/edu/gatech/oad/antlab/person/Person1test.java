@@ -30,14 +30,14 @@ public class Person1 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-		char[] backingArray = new char[input.length()];
+		Char[] backingArray = new Char[input.length()];
 		int count = 0;
-		for (int i = 2; i < input.length() + 2; i++){
-			backingArray[count] = input.charAt(i % input.length());
+		for (int i = 2; i < input.length + 2; i++){
+			backingArray[count] = input.charAt(i%input.length);
 			count++;
 		}
 		String newString = "";
-		for (int i = 0; i < input.length(); i++){
+		for (int i = 0; i < input.length; i++){
 			newString += backingArray[i];
 		}
 	  //Person 1 put your implementation here
@@ -55,8 +55,10 @@ public class Person1 {
 	public String toString(String input) {
 	  return name + calc(input);
 	}
+
 }
+public static void main(String[] args) {
+	Person1 trea = new Person1("Trea");
+	System.out.println(trea.calc("gtg123b"));
 
-
-
-
+}
