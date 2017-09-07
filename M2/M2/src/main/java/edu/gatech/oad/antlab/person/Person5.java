@@ -31,7 +31,19 @@ public class Person5 {
 	 */
 	private String calc(String input) {
 	  //Person 5 put your implementation here
-	  return null;
+          int length = input.length();
+          char[] letters = new char[length];
+          input.getChars(0, length, letters, 0);
+          int index = 2;
+          input = "";
+          for (char x: letters) {
+            if (index >= length) {
+              index = index - length;
+            }
+            input+=letters[index];
+            index++;
+          }
+	  return input;
 	}
 	
 	/**
