@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+defaultTasks 'jar'
+
+dependencies {
+    compile files('lib/resources.jar')
+}
+
+jar {
+    from(configuration.compile.collect {it.isDirectory() ? it : zipTree(it) })
+    manifest {
+        attributes ('Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain')
+    }
+}
