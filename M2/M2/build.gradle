@@ -1,0 +1,15 @@
+defaultTasks 'jar'
+
+apply plugin: 'java'
+
+//dependencies {
+	//compile 'lib\resources.jar'
+//}
+
+jar { 
+	manifest {
+		attributes(
+			'Main-Class': package edu.gatech.oad.antlab.pkg1.AntLabMain 
+		)
+	}
+}
