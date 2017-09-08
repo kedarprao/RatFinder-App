@@ -29,6 +29,7 @@ public class Person4 {
      * @param input the string to be modified
      * @return the modified string
      */
+     //This is a new comment to test changes to my personal branch.
     private String calc(String input) {
       //Person 4 put your implementation here
       String newStr = "";
