@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		973979191F7070E500433DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973979181F7070E500433DB3 /* AppDelegate.swift */; };
-		9739791B1F7070E500433DB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739791A1F7070E500433DB3 /* ViewController.swift */; };
+		9739791B1F7070E500433DB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739791A1F7070E500433DB3 /* LoginViewController.swift */; };
 		9739791E1F7070E500433DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9739791C1F7070E500433DB3 /* Main.storyboard */; };
 		973979211F7070E500433DB3 /* RatFinder_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9739791F1F7070E500433DB3 /* RatFinder_ios.xcdatamodeld */; };
 		973979231F7070E500433DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973979221F7070E500433DB3 /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		973979151F7070E500433DB3 /* RatFinder_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RatFinder_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		973979181F7070E500433DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9739791A1F7070E500433DB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9739791A1F7070E500433DB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9739791D1F7070E500433DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		973979201F7070E500433DB3 /* RatFinder_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RatFinder_ios.xcdatamodel; sourceTree = "<group>"; };
 		973979221F7070E500433DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				973979181F7070E500433DB3 /* AppDelegate.swift */,
-				9739791A1F7070E500433DB3 /* ViewController.swift */,
+				9739791A1F7070E500433DB3 /* LoginViewController.swift */,
 				9739791C1F7070E500433DB3 /* Main.storyboard */,
 				973979221F7070E500433DB3 /* Assets.xcassets */,
 				973979241F7070E500433DB3 /* LaunchScreen.storyboard */,
@@ -265,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9739791B1F7070E500433DB3 /* ViewController.swift in Sources */,
+				9739791B1F7070E500433DB3 /* LoginViewController.swift in Sources */,
 				973979191F7070E500433DB3 /* AppDelegate.swift in Sources */,
 				973979211F7070E500433DB3 /* RatFinder_ios.xcdatamodeld in Sources */,
 			);
@@ -520,6 +520,7 @@
 				973979421F7070E500433DB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		973979431F7070E500433DB3 /* Build configuration list for PBXNativeTarget "RatFinder_iosTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +529,7 @@
 				973979451F7070E500433DB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		973979461F7070E500433DB3 /* Build configuration list for PBXNativeTarget "RatFinder_iosUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +538,7 @@
 				973979481F7070E500433DB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
