@@ -10,11 +10,12 @@
 		973979191F7070E500433DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973979181F7070E500433DB3 /* AppDelegate.swift */; };
 		9739791B1F7070E500433DB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739791A1F7070E500433DB3 /* LoginViewController.swift */; };
 		9739791E1F7070E500433DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9739791C1F7070E500433DB3 /* Main.storyboard */; };
-		973979211F7070E500433DB3 /* RatFinder_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9739791F1F7070E500433DB3 /* RatFinder_ios.xcdatamodeld */; };
 		973979231F7070E500433DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973979221F7070E500433DB3 /* Assets.xcassets */; };
 		973979261F7070E500433DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973979241F7070E500433DB3 /* LaunchScreen.storyboard */; };
 		973979311F7070E500433DB3 /* RatFinder_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973979301F7070E500433DB3 /* RatFinder_iosTests.swift */; };
 		9739793C1F7070E500433DB3 /* RatFinder_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739793B1F7070E500433DB3 /* RatFinder_iosUITests.swift */; };
+		97A41B101F79836300AA4DDE /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A41B0F1F79836300AA4DDE /* HomePageViewController.swift */; };
+		97A41B121F79845D00AA4DDE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,6 @@
 		973979181F7070E500433DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9739791A1F7070E500433DB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9739791D1F7070E500433DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		973979201F7070E500433DB3 /* RatFinder_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RatFinder_ios.xcdatamodel; sourceTree = "<group>"; };
 		973979221F7070E500433DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		973979251F7070E500433DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		973979271F7070E500433DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		973979371F7070E500433DB3 /* RatFinder_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatFinder_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9739793B1F7070E500433DB3 /* RatFinder_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatFinder_iosUITests.swift; sourceTree = "<group>"; };
 		9739793D1F7070E500433DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97A41B0F1F79836300AA4DDE /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +104,11 @@
 				973979181F7070E500433DB3 /* AppDelegate.swift */,
 				9739791A1F7070E500433DB3 /* LoginViewController.swift */,
 				9739791C1F7070E500433DB3 /* Main.storyboard */,
+				97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */,
+				97A41B0F1F79836300AA4DDE /* HomePageViewController.swift */,
 				973979221F7070E500433DB3 /* Assets.xcassets */,
 				973979241F7070E500433DB3 /* LaunchScreen.storyboard */,
 				973979271F7070E500433DB3 /* Info.plist */,
-				9739791F1F7070E500433DB3 /* RatFinder_ios.xcdatamodeld */,
 			);
 			path = RatFinder_ios;
 			sourceTree = "<group>";
@@ -265,9 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97A41B101F79836300AA4DDE /* HomePageViewController.swift in Sources */,
 				9739791B1F7070E500433DB3 /* LoginViewController.swift in Sources */,
+				97A41B121F79845D00AA4DDE /* RegistrationViewController.swift in Sources */,
 				973979191F7070E500433DB3 /* AppDelegate.swift in Sources */,
-				973979211F7070E500433DB3 /* RatFinder_ios.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,19 +545,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		9739791F1F7070E500433DB3 /* RatFinder_ios.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				973979201F7070E500433DB3 /* RatFinder_ios.xcdatamodel */,
-			);
-			currentVersion = 973979201F7070E500433DB3 /* RatFinder_ios.xcdatamodel */;
-			path = RatFinder_ios.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 9739790D1F7070E500433DB3 /* Project object */;
 }
