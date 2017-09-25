@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2ST-3k-dMg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2ST-3k-dMg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="730" y="-88"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Page View Controller-->
         <scene sceneID="Io9-Oi-8cO">
             <objects>
-                <viewController id="F5w-Lj-fq0" sceneMemberID="viewController">
+                <viewController id="F5w-Lj-fq0" customClass="HomePageViewController" customModule="RatFinder_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4fw-sQ-aSr"/>
                         <viewControllerLayoutGuide type="bottom" id="PyT-lQ-GMn"/>
@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="1633" y="313"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration View Controller-->
         <scene sceneID="1uk-no-lPl">
             <objects>
-                <viewController id="1Nk-Ly-JdX" sceneMemberID="viewController">
+                <viewController id="1Nk-Ly-JdX" customClass="RegistrationViewController" customModule="RatFinder_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IAc-ie-s6e"/>
                         <viewControllerLayoutGuide type="bottom" id="7Gt-5F-fJ9"/>
@@ -160,7 +160,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2ST-3k-dMg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nNf-IA-Ega">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
