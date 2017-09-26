@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RatFinder</string>
+    <string name="facebook_app_id">137751913513893</string>
+    <string name="fb_login_protocol_scheme">fb137751913513893</string>
 </resources>
