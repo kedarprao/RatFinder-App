@@ -70,12 +70,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASB-3B-H7j">
                                         <rect key="frame" x="0.0" y="35.5" width="161.5" height="30"/>
                                         <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Xi-Ji-9M7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNT-Cz-9DH">
                                         <rect key="frame" x="181.5" y="35.5" width="161.5" height="30"/>
-                                        <state key="normal" title="Sign In"/>
+                                        <state key="normal" title="Login"/>
                                         <connections>
-                                            <segue destination="F5w-Lj-fq0" kind="show" id="ett-fE-ggh"/>
+                                            <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hrr-iT-uUS"/>
+                                            <segue destination="tZ0-x4-gxb" kind="show" identifier="should" id="XzV-fJ-Il9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -113,28 +117,32 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome!" id="kpq-2A-Bvh"/>
+                    <connections>
+                        <outlet property="passwordText" destination="ahO-Lc-qtU" id="b33-yi-1Nh"/>
+                        <outlet property="usernameText" destination="9fh-TV-OxX" id="9aa-Uz-hhK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="730" y="-88"/>
+            <point key="canvasLocation" x="721" y="-88"/>
         </scene>
         <!--Home Page View Controller-->
-        <scene sceneID="Io9-Oi-8cO">
+        <scene sceneID="r6T-ZB-gzX">
             <objects>
-                <viewController id="F5w-Lj-fq0" customClass="HomePageViewController" customModule="RatFinder_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tZ0-x4-gxb" customClass="HomePageViewController" customModule="RatFinder_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4fw-sQ-aSr"/>
-                        <viewControllerLayoutGuide type="bottom" id="PyT-lQ-GMn"/>
+                        <viewControllerLayoutGuide type="top" id="eCT-Zg-Yhg"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Zo-Zg-oez"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ML0-yB-HBv">
+                    <view key="view" contentMode="scaleToFill" id="Ng3-5x-e5s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nQf-4R-QAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBc-ui-1n2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1633" y="313"/>
+            <point key="canvasLocation" x="1580" y="342"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="1uk-no-lPl">
@@ -152,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WcW-45-hhj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1633" y="-501"/>
+            <point key="canvasLocation" x="1580" y="-501"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZBO-UM-le6">

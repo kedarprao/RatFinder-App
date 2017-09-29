@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  RatFinder_ios
 //
 //  Created by Kedar Rao on 9/18/17.
@@ -19,6 +19,18 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    @IBOutlet weak var usernameText: UITextField!
+    
+    @IBOutlet weak var passwordText: UITextField!
+    
+    @IBAction func loginButton(_ sender: UIButton) {
+        if (usernameText.text != "admin" && passwordText.text != "password") {
+            let alertView = UIAlertController(title: "Cannot Login" , message: "Incorrect Username or Password", preferredStyle: .alert)
+            self.present(alertView, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func cancelButton(_ sender: Any) {
+    }
 }
 
