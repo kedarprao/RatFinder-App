@@ -25,8 +25,12 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: UIButton) {
         if (usernameText.text != "admin" && passwordText.text != "password") {
-            let alertView = UIAlertController(title: "Cannot Login" , message: "Incorrect Username or Password", preferredStyle: .alert)
-            self.present(alertView, animated: true, completion: nil)
+            let alertLogin = UIAlertController(title: "Cannot Login" , message: "Incorrect Username or Password", preferredStyle: .alert)
+            let actionLogin = UIAlertAction(title: "Try Again", style: .default, handler: nil)
+            alertLogin.addAction(actionLogin)
+            self.present(alertLogin, animated: true, completion: nil)
+        } else {
+            self.performSegue(withIdentifier: "LoginToHomeSegue", sender: self)
         }
     }
     

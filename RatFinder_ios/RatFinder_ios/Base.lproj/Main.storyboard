@@ -79,7 +79,6 @@
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hrr-iT-uUS"/>
-                                            <segue destination="tZ0-x4-gxb" kind="show" identifier="should" id="XzV-fJ-Il9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -120,6 +119,7 @@
                     <connections>
                         <outlet property="passwordText" destination="ahO-Lc-qtU" id="b33-yi-1Nh"/>
                         <outlet property="usernameText" destination="9fh-TV-OxX" id="9aa-Uz-hhK"/>
+                        <segue destination="tZ0-x4-gxb" kind="show" identifier="LoginToHomeSegue" id="oOK-gh-lXK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
