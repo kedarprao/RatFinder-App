@@ -8,7 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashMap;
 
 public class LoginActivity extends AppCompatActivity {
@@ -42,19 +43,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-    public void setAdminLogins() {
-        String admin = "admin";
-        String adminPW = "password";
-        validLogins.put(admin.hashCode(), adminPW);
-    }
-
     public boolean checkLogin() {
-        setAdminLogins();
         String username = ((EditText) findViewById(R.id.Username)).getText().toString();
         String password = ((EditText) findViewById(R.id.Password)).getText().toString();
-        if (validLogins.get(username.hashCode()) != null) {
-            if (validLogins.get(username.hashCode()).equals(password)) {
+        if (RegistrationActivity.getValidLogins().get(username.hashCode()) != null) {
+            if (RegistrationActivity.getValidLogins().get(username.hashCode()).equals(password)) {
                 return true;
             }
         }
