@@ -12,14 +12,6 @@ public class StartupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // FaceBook's SDK Helper Method used to activate Logging App Events -- Not working currently
-//        @Override
-//        public void onCreate() {
-//            super.onCreate();
-//            FacebookSdk.sdkInitialize(getApplicationContext());
-//            AppEventsLogger.activateApp(this);
-//        }
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startup);
 
