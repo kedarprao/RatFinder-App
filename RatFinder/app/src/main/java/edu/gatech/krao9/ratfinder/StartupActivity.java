@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
 
 public class StartupActivity extends AppCompatActivity {
 
@@ -24,13 +22,11 @@ public class StartupActivity extends AppCompatActivity {
                 startActivity(new Intent(StartupActivity.this, LoginActivity.class));
             }
         });
-
         toRegistrationActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(StartupActivity.this, RegistrationActivity.class));
             }
         });
-
     }
 }

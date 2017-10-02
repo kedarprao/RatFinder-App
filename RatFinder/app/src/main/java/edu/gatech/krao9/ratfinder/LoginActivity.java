@@ -10,9 +10,10 @@ import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.HashMap;
-
+import java.util.HashMap;
 
 public class LoginActivity extends AppCompatActivity {
+    private HashMap validLogins = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +43,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
     public boolean checkLogin() {
         String username = ((EditText) findViewById(R.id.Username)).getText().toString();
         String password = ((EditText) findViewById(R.id.Password)).getText().toString();
