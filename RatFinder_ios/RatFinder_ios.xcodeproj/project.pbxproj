@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		970E4E961F82BFBD006A44D3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 970E4E951F82BFBD006A44D3 /* Default-568h@2x.png */; };
 		973979191F7070E500433DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973979181F7070E500433DB3 /* AppDelegate.swift */; };
 		9739791B1F7070E500433DB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739791A1F7070E500433DB3 /* LoginViewController.swift */; };
 		9739791E1F7070E500433DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9739791C1F7070E500433DB3 /* Main.storyboard */; };
@@ -17,7 +18,6 @@
 		9747D9BF1F7F3E0500DFB303 /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */; };
 		97A41B101F79836300AA4DDE /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A41B0F1F79836300AA4DDE /* HomePageViewController.swift */; };
 		97A41B121F79845D00AA4DDE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */; };
-		97DF23A01F817EBE00F8A71F /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF239F1F817EBE00F8A71F /* Practice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		970E4E951F82BFBD006A44D3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		973979151F7070E500433DB3 /* RatFinder_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RatFinder_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		973979181F7070E500433DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9739791A1F7070E500433DB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		97A41B0F1F79836300AA4DDE /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		97DF239F1F817EBE00F8A71F /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +85,7 @@
 		9739790C1F7070E500433DB3 = {
 			isa = PBXGroup;
 			children = (
+				970E4E951F82BFBD006A44D3 /* Default-568h@2x.png */,
 				973979171F7070E500433DB3 /* RatFinder_ios */,
 				9739792F1F7070E500433DB3 /* RatFinder_iosTests */,
 				9739793A1F7070E500433DB3 /* RatFinder_iosUITests */,
@@ -105,16 +106,9 @@
 		973979171F7070E500433DB3 /* RatFinder_ios */ = {
 			isa = PBXGroup;
 			children = (
-				973979181F7070E500433DB3 /* AppDelegate.swift */,
-				9739791A1F7070E500433DB3 /* LoginViewController.swift */,
-				97DF239F1F817EBE00F8A71F /* Practice.swift */,
+				97DF23A11F82BED800F8A71F /* ViewControllers */,
 				9739791C1F7070E500433DB3 /* Main.storyboard */,
-				9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */,
-				97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */,
-				97A41B0F1F79836300AA4DDE /* HomePageViewController.swift */,
-				973979221F7070E500433DB3 /* Assets.xcassets */,
-				973979241F7070E500433DB3 /* LaunchScreen.storyboard */,
-				973979271F7070E500433DB3 /* Info.plist */,
+				97DF23A21F82BEF000F8A71F /* Support */,
 			);
 			path = RatFinder_ios;
 			sourceTree = "<group>";
@@ -135,6 +129,28 @@
 				9739793D1F7070E500433DB3 /* Info.plist */,
 			);
 			path = RatFinder_iosUITests;
+			sourceTree = "<group>";
+		};
+		97DF23A11F82BED800F8A71F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9739791A1F7070E500433DB3 /* LoginViewController.swift */,
+				97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */,
+				97A41B0F1F79836300AA4DDE /* HomePageViewController.swift */,
+				9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		97DF23A21F82BEF000F8A71F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				973979181F7070E500433DB3 /* AppDelegate.swift */,
+				973979221F7070E500433DB3 /* Assets.xcassets */,
+				973979241F7070E500433DB3 /* LaunchScreen.storyboard */,
+				973979271F7070E500433DB3 /* Info.plist */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				973979261F7070E500433DB3 /* LaunchScreen.storyboard in Resources */,
+				970E4E961F82BFBD006A44D3 /* Default-568h@2x.png in Resources */,
 				973979231F7070E500433DB3 /* Assets.xcassets in Resources */,
 				9739791E1F7070E500433DB3 /* Main.storyboard in Resources */,
 			);
@@ -277,7 +294,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97DF23A01F817EBE00F8A71F /* Practice.swift in Sources */,
 				97A41B101F79836300AA4DDE /* HomePageViewController.swift in Sources */,
 				9739791B1F7070E500433DB3 /* LoginViewController.swift in Sources */,
 				97A41B121F79845D00AA4DDE /* RegistrationViewController.swift in Sources */,
@@ -449,7 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7SKJ7LN625;
-				INFOPLIST_FILE = RatFinder_ios/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RatFinder_ios/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.krao.RatFinder-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -463,7 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7SKJ7LN625;
-				INFOPLIST_FILE = RatFinder_ios/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RatFinder_ios/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.krao.RatFinder-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
