@@ -145,11 +145,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="LV6-72-9lh"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="icons8-map_marker_filled" selectedImage="icons8-map_marker_filled" id="LV6-72-9lh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGS-gV-yJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2816.8000000000002" y="528.48575712143929"/>
+            <point key="canvasLocation" x="2650" y="660"/>
         </scene>
         <!--Settings-->
         <scene sceneID="GR4-ub-jPR">
@@ -164,11 +164,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="hLK-X9-Adt"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-settings_filled" selectedImage="icons8-settings_filled" id="hLK-X9-Adt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BfW-34-1Ix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2185" y="1183"/>
+            <point key="canvasLocation" x="2081" y="1178"/>
         </scene>
         <!--Home Page-->
         <scene sceneID="Q9r-2c-3xW">
@@ -183,11 +183,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="eIe-tQ-Wb6"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="icons8-home_page_filled" selectedImage="icons8-home_page_filled" id="eIe-tQ-Wb6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLu-2E-V7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2817" y="-176"/>
+            <point key="canvasLocation" x="2495" y="-241"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rKT-gj-LTG">
@@ -227,4 +227,9 @@
             <point key="canvasLocation" x="1580" y="-501"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-home_page_filled" width="25" height="25"/>
+        <image name="icons8-map_marker_filled" width="25" height="25"/>
+        <image name="icons8-settings_filled" width="25" height="25"/>
+    </resources>
 </document>
