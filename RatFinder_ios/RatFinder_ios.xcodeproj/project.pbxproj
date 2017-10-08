@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		970E4E961F82BFBD006A44D3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 970E4E951F82BFBD006A44D3 /* Default-568h@2x.png */; };
 		973979191F7070E500433DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973979181F7070E500433DB3 /* AppDelegate.swift */; };
-		9739791B1F7070E500433DB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739791A1F7070E500433DB3 /* ViewController.swift */; };
+		9739791B1F7070E500433DB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739791A1F7070E500433DB3 /* LoginViewController.swift */; };
 		9739791E1F7070E500433DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9739791C1F7070E500433DB3 /* Main.storyboard */; };
-		973979211F7070E500433DB3 /* RatFinder_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9739791F1F7070E500433DB3 /* RatFinder_ios.xcdatamodeld */; };
 		973979231F7070E500433DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973979221F7070E500433DB3 /* Assets.xcassets */; };
 		973979261F7070E500433DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973979241F7070E500433DB3 /* LaunchScreen.storyboard */; };
 		973979311F7070E500433DB3 /* RatFinder_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973979301F7070E500433DB3 /* RatFinder_iosTests.swift */; };
 		9739793C1F7070E500433DB3 /* RatFinder_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739793B1F7070E500433DB3 /* RatFinder_iosUITests.swift */; };
+		9747D9BF1F7F3E0500DFB303 /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */; };
+		97A41B101F79836300AA4DDE /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A41B0F1F79836300AA4DDE /* HomePageViewController.swift */; };
+		97A41B121F79845D00AA4DDE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		970E4E951F82BFBD006A44D3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		973979151F7070E500433DB3 /* RatFinder_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RatFinder_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		973979181F7070E500433DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9739791A1F7070E500433DB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9739791A1F7070E500433DB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9739791D1F7070E500433DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		973979201F7070E500433DB3 /* RatFinder_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RatFinder_ios.xcdatamodel; sourceTree = "<group>"; };
 		973979221F7070E500433DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		973979251F7070E500433DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		973979271F7070E500433DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		973979371F7070E500433DB3 /* RatFinder_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatFinder_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9739793B1F7070E500433DB3 /* RatFinder_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatFinder_iosUITests.swift; sourceTree = "<group>"; };
 		9739793D1F7070E500433DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
+		97A41B0F1F79836300AA4DDE /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		9739790C1F7070E500433DB3 = {
 			isa = PBXGroup;
 			children = (
+				970E4E951F82BFBD006A44D3 /* Default-568h@2x.png */,
 				973979171F7070E500433DB3 /* RatFinder_ios */,
 				9739792F1F7070E500433DB3 /* RatFinder_iosTests */,
 				9739793A1F7070E500433DB3 /* RatFinder_iosUITests */,
@@ -99,13 +106,9 @@
 		973979171F7070E500433DB3 /* RatFinder_ios */ = {
 			isa = PBXGroup;
 			children = (
-				973979181F7070E500433DB3 /* AppDelegate.swift */,
-				9739791A1F7070E500433DB3 /* ViewController.swift */,
+				97DF23A11F82BED800F8A71F /* ViewControllers */,
 				9739791C1F7070E500433DB3 /* Main.storyboard */,
-				973979221F7070E500433DB3 /* Assets.xcassets */,
-				973979241F7070E500433DB3 /* LaunchScreen.storyboard */,
-				973979271F7070E500433DB3 /* Info.plist */,
-				9739791F1F7070E500433DB3 /* RatFinder_ios.xcdatamodeld */,
+				97DF23A21F82BEF000F8A71F /* Support */,
 			);
 			path = RatFinder_ios;
 			sourceTree = "<group>";
@@ -126,6 +129,28 @@
 				9739793D1F7070E500433DB3 /* Info.plist */,
 			);
 			path = RatFinder_iosUITests;
+			sourceTree = "<group>";
+		};
+		97DF23A11F82BED800F8A71F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9739791A1F7070E500433DB3 /* LoginViewController.swift */,
+				97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */,
+				97A41B0F1F79836300AA4DDE /* HomePageViewController.swift */,
+				9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		97DF23A21F82BEF000F8A71F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				973979181F7070E500433DB3 /* AppDelegate.swift */,
+				973979221F7070E500433DB3 /* Assets.xcassets */,
+				973979241F7070E500433DB3 /* LaunchScreen.storyboard */,
+				973979271F7070E500433DB3 /* Info.plist */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,23 +216,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Kedar Rao";
 				TargetAttributes = {
 					973979141F7070E500433DB3 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7SKJ7LN625;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					9739792B1F7070E500433DB3 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7SKJ7LN625;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 973979141F7070E500433DB3;
 					};
 					973979361F7070E500433DB3 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7SKJ7LN625;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 973979141F7070E500433DB3;
 					};
@@ -239,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				973979261F7070E500433DB3 /* LaunchScreen.storyboard in Resources */,
+				970E4E961F82BFBD006A44D3 /* Default-568h@2x.png in Resources */,
 				973979231F7070E500433DB3 /* Assets.xcassets in Resources */,
 				9739791E1F7070E500433DB3 /* Main.storyboard in Resources */,
 			);
@@ -265,9 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9739791B1F7070E500433DB3 /* ViewController.swift in Sources */,
+				97A41B101F79836300AA4DDE /* HomePageViewController.swift in Sources */,
+				9739791B1F7070E500433DB3 /* LoginViewController.swift in Sources */,
+				97A41B121F79845D00AA4DDE /* RegistrationViewController.swift in Sources */,
 				973979191F7070E500433DB3 /* AppDelegate.swift in Sources */,
-				973979211F7070E500433DB3 /* RatFinder_ios.xcdatamodeld in Sources */,
+				9747D9BF1F7F3E0500DFB303 /* DismissKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +363,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -340,7 +373,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -383,7 +420,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -391,7 +430,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -422,11 +465,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7SKJ7LN625;
-				INFOPLIST_FILE = RatFinder_ios/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RatFinder_ios/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.krao.RatFinder-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -435,11 +479,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7SKJ7LN625;
-				INFOPLIST_FILE = RatFinder_ios/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RatFinder_ios/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.krao.RatFinder-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -453,7 +498,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.krao.RatFinder-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RatFinder_ios.app/RatFinder_ios";
 			};
 			name = Debug;
@@ -468,7 +514,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.krao.RatFinder-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RatFinder_ios.app/RatFinder_ios";
 			};
 			name = Release;
@@ -482,7 +529,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.krao.RatFinder-iosUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = RatFinder_ios;
 			};
 			name = Debug;
@@ -496,7 +544,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.krao.RatFinder-iosUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = RatFinder_ios;
 			};
 			name = Release;
@@ -520,6 +569,7 @@
 				973979421F7070E500433DB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		973979431F7070E500433DB3 /* Build configuration list for PBXNativeTarget "RatFinder_iosTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +578,7 @@
 				973979451F7070E500433DB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		973979461F7070E500433DB3 /* Build configuration list for PBXNativeTarget "RatFinder_iosUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,21 +587,9 @@
 				973979481F7070E500433DB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		9739791F1F7070E500433DB3 /* RatFinder_ios.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				973979201F7070E500433DB3 /* RatFinder_ios.xcdatamodel */,
-			);
-			currentVersion = 973979201F7070E500433DB3 /* RatFinder_ios.xcdatamodel */;
-			path = RatFinder_ios.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 9739790D1F7070E500433DB3 /* Project object */;
 }
