@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -21,20 +22,21 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBOutlet weak var usernameText: UITextField!
-    
+    @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     
     @IBAction func loginButton(_ sender: UIButton) {
-        if (usernameText.text == "admin" && passwordText.text == "password") {
-            self.performSegue(withIdentifier: "LoginToHomeSegue", sender: self)
-        } else {
-            let alertLogin = UIAlertController(title: "Cannot Login" , message: "Incorrect Username or Password", preferredStyle: .alert)
-            let actionLogin = UIAlertAction(title: "Try Again", style: .default, handler: nil)
-            alertLogin.addAction(actionLogin)
-            self.present(alertLogin, animated: true, completion: nil)
+        guard let email = emailText.text, let password = passwordText.text else { return }
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if error == nil {
+                self.performSegue(withIdentifier: "LoginToHomeSegue", sender: self)
+            } else {
+                let alertLogin = UIAlertController(title: "Cannot Login" , message: "Incorrect Username or Password", preferredStyle: .alert)
+                let actionLogin = UIAlertAction(title: "Try Again", style: .default, handler: nil)
+                alertLogin.addAction(actionLogin)
+                self.present(alertLogin, animated: true, completion: nil)
+            }
         }
     }
-    
 }
 

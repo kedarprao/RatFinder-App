@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController {
+class HomePageTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

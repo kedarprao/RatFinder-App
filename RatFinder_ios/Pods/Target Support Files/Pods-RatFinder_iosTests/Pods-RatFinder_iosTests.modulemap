@@ -1,0 +1,6 @@
+framework module Pods_RatFinder_iosTests {
+  umbrella header "Pods-RatFinder_iosTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
