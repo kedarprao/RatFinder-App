@@ -6,12 +6,16 @@ import android.os.Bundle;
 //import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 //import android.support.v7.widget.Toolbar;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+//import android.support.design.widget.FloatingActionButton;
+//import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ExpandableListAdapter;
+import android.widget.ExpandableListView;
+import android.widget.ListView;
+
+import adapters.SightingsExpandableListAdapter;
+
 
 public class HomeScreen extends AppCompatActivity {
 
@@ -27,6 +31,16 @@ public class HomeScreen extends AppCompatActivity {
                 startActivity(new Intent(HomeScreen.this, StartupActivity.class));
             }
         });
-    }
 
+
+        SightingsExpandableListAdapter adapter = new SightingsExpandableListAdapter(this);
+
+          
+        adapter.addSightingsFromCsv(this, "Rat_Sightings.csv");
+
+
+        ExpandableListView sightingsLV = (ExpandableListView) findViewById(R.id.ratListView);
+        sightingsLV.setAdapter(adapter);
+
+    }
 }
