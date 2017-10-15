@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51727E271F93230B002E1921 /* Sighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51727E261F93230B002E1921 /* Sighting.swift */; };
+		51727E291F932580002E1921 /* SightingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51727E281F932580002E1921 /* SightingTableViewCell.swift */; };
+		51727E2B1F932791002E1921 /* SightingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51727E2A1F932791002E1921 /* SightingTableViewController.swift */; };
+		51727E2E1F932ADA002E1921 /* Rat_Sightings_SHORTENED.csv in Resources */ = {isa = PBXBuildFile; fileRef = 51727E2D1F932ADA002E1921 /* Rat_Sightings_SHORTENED.csv */; };
 		80CF784F0FDDAD9F7D28C0B7 /* Pods_RatFinder_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E645C60D416741A3B76F7D0 /* Pods_RatFinder_ios.framework */; };
 		970E4E961F82BFBD006A44D3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 970E4E951F82BFBD006A44D3 /* Default-568h@2x.png */; };
 		971F1EA01F8C31C4001C75AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 973729E61F8B0FEF007C6E34 /* GoogleService-Info.plist */; };
@@ -47,6 +51,10 @@
 		09359052C13A1F18B2C8E7D2 /* Pods-RatFinder_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatFinder_ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RatFinder_ios/Pods-RatFinder_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		0E645C60D416741A3B76F7D0 /* Pods_RatFinder_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatFinder_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		160F75BE323B3227E15D3572 /* Pods_RatFinder_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatFinder_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51727E261F93230B002E1921 /* Sighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sighting.swift; sourceTree = "<group>"; };
+		51727E281F932580002E1921 /* SightingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightingTableViewCell.swift; sourceTree = "<group>"; };
+		51727E2A1F932791002E1921 /* SightingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightingTableViewController.swift; sourceTree = "<group>"; };
+		51727E2D1F932ADA002E1921 /* Rat_Sightings_SHORTENED.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Rat_Sightings_SHORTENED.csv; path = ../../../../../../Desktop/Rat_Sightings_SHORTENED.csv; sourceTree = "<group>"; };
 		5E0C7E191ECAFC1AAE5BEE49 /* Pods-RatFinder_iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatFinder_iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RatFinder_iosTests/Pods-RatFinder_iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7468486A2278D3C9A58703AA /* Pods_RatFinder_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatFinder_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		790A24237EBA5B1F729906C6 /* Pods-RatFinder_iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatFinder_iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RatFinder_iosTests/Pods-RatFinder_iosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +119,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		51727E251F9322E5002E1921 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51727E261F93230B002E1921 /* Sighting.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		51727E2C1F932A68002E1921 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				51727E2D1F932ADA002E1921 /* Rat_Sightings_SHORTENED.csv */,
+			);
+			name = Assets;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		8E01243108FF92DB77F309D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +152,7 @@
 		9739790C1F7070E500433DB3 = {
 			isa = PBXGroup;
 			children = (
+				51727E2C1F932A68002E1921 /* Assets */,
 				970E4E951F82BFBD006A44D3 /* Default-568h@2x.png */,
 				973979171F7070E500433DB3 /* RatFinder_ios */,
 				9739792F1F7070E500433DB3 /* RatFinder_iosTests */,
@@ -142,6 +168,7 @@
 		973979171F7070E500433DB3 /* RatFinder_ios */ = {
 			isa = PBXGroup;
 			children = (
+				51727E251F9322E5002E1921 /* Models */,
 				97DF23A11F82BED800F8A71F /* ViewControllers */,
 				9739791C1F7070E500433DB3 /* Main.storyboard */,
 				973729E61F8B0FEF007C6E34 /* GoogleService-Info.plist */,
@@ -176,6 +203,8 @@
 				97BA2D1D1F8AD3AD00AEC4A5 /* SettingsViewController.swift */,
 				97A41B0F1F79836300AA4DDE /* HomePageTableViewController.swift */,
 				9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */,
+				51727E281F932580002E1921 /* SightingTableViewCell.swift */,
+				51727E2A1F932791002E1921 /* SightingTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -317,6 +346,7 @@
 				970E4E961F82BFBD006A44D3 /* Default-568h@2x.png in Resources */,
 				971F1EA01F8C31C4001C75AF /* GoogleService-Info.plist in Resources */,
 				973979231F7070E500433DB3 /* Assets.xcassets in Resources */,
+				51727E2E1F932ADA002E1921 /* Rat_Sightings_SHORTENED.csv in Resources */,
 				9739791E1F7070E500433DB3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,10 +528,13 @@
 			files = (
 				97A41B101F79836300AA4DDE /* HomePageTableViewController.swift in Sources */,
 				9739791B1F7070E500433DB3 /* LoginViewController.swift in Sources */,
+				51727E271F93230B002E1921 /* Sighting.swift in Sources */,
 				97A41B121F79845D00AA4DDE /* RegistrationViewController.swift in Sources */,
 				973979191F7070E500433DB3 /* AppDelegate.swift in Sources */,
 				9747D9BF1F7F3E0500DFB303 /* DismissKeyboard.swift in Sources */,
+				51727E291F932580002E1921 /* SightingTableViewCell.swift in Sources */,
 				97BA2D1E1F8AD3AD00AEC4A5 /* SettingsViewController.swift in Sources */,
+				51727E2B1F932791002E1921 /* SightingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
