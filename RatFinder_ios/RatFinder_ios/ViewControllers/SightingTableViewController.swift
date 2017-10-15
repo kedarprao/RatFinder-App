@@ -78,10 +78,22 @@ class SightingTableViewController: UITableViewController {
         }
 
         let sighting = sightings[indexPath.row]
-
+        
         cell.createdDate.text = sighting.createdDate
         cell.incidentAddress.text = sighting.incidentAddress
+        
+        cell.locationType.text = "Location Type: " + sighting.children["locationType"]!
+        cell.locationZip.text = "Location Zip: " + sighting.children["incidentZip"]!
+        cell.borough.text = "Borough: " + sighting.children["borough"]!
+        cell.city.text = "City: " + sighting.children["city"]!
+        
+        let x = sighting.children["latitude"]!
+        let y = sighting.children["longitude"]!
+        let index = x.index(x.startIndex, offsetBy: 4)
 
+        cell.coordinates.text = "(" + x + ", " + y + ")"
+        cell.uniqueKey.text = "Unique Key: " + sighting.children["uniqueKey"]!
+        
         return cell
     }
     
