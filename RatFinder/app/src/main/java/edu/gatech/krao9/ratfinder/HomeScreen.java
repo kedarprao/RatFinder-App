@@ -15,6 +15,7 @@ import android.widget.ExpandableListView;
 import android.widget.ListView;
 
 import adapters.SightingsExpandableListAdapter;
+import models.Sighting;
 
 
 public class HomeScreen extends AppCompatActivity {
@@ -44,7 +45,10 @@ public class HomeScreen extends AppCompatActivity {
 
         SightingsExpandableListAdapter adapter = new SightingsExpandableListAdapter(this);
 
-          
+        Rat r = (Rat) getIntent().getSerializableExtra("NEW_RAT");
+        if (r != null) {
+            adapter.addSighting(new Sighting(r));
+        }
         adapter.addSightingsFromCsv(this, "Rat_Sightings.csv");
 
 
