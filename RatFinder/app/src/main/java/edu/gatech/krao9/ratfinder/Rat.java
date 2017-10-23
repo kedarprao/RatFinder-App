@@ -1,5 +1,6 @@
 package edu.gatech.krao9.ratfinder;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -7,7 +8,7 @@ import java.util.Date;
  * Rat object class
  */
 
-public class Rat {
+public class Rat implements Serializable {
 
     private int uniqueKey;
     private Date createdDate;

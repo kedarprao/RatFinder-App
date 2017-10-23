@@ -32,8 +32,10 @@ public class NewRatSightingActivity extends AppCompatActivity {
         confirmNewRat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createNewRat();
-                startActivity(new Intent(NewRatSightingActivity.this, HomeScreen.class));
+                Rat newRat = createNewRat();
+                Intent home = new Intent(NewRatSightingActivity.this, HomeScreen.class);
+                home.putExtra("NEW_RAT", newRat);
+                startActivity(home);
             }
         });
         cancelNewRat.setOnClickListener(new View.OnClickListener() {
