@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.Date;
 
 /**
@@ -62,6 +65,21 @@ public class NewRatSightingActivity extends AppCompatActivity {
         Date createdDate = new Date();
         float lat = Integer.parseInt(latitude.getText().toString());
         float lonng = Integer.parseInt(longitude.getText().toString());
+
+        // Write to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("rat");
+
+        /*ADDS NEW RAT TO FIREBASE*/
+        /*myRef.push().setValue(new Rat(createdDate, locationType.getText().toString(),
+                Integer.parseInt(incidentZip.getText().toString()),
+                incidentAddress.getText().toString(), city.getText().toString(),
+                borough.getText().toString(), lat, lonng));*/
+
+        myRef.setValue(new Rat(createdDate, locationType.getText().toString(),
+                Integer.parseInt(incidentZip.getText().toString()),
+                incidentAddress.getText().toString(), city.getText().toString(),
+                borough.getText().toString(), lat, lonng));
 
         return new Rat(createdDate, locationType.getText().toString(),
                 Integer.parseInt(incidentZip.getText().toString()),
