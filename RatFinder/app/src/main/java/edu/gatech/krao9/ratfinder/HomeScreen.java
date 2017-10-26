@@ -27,6 +27,14 @@ public class HomeScreen extends AppCompatActivity {
 
         final Button logoutButton = (Button) findViewById(R.id.logout_button);
         final Button addNewRatButton = (Button) findViewById(R.id.addRat_button);
+        final Button mapButton = (Button) findViewById(R.id.map_button);
+
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeScreen.this, RatMapActivity.class));
+            }
+        });
 
         addNewRatButton.setOnClickListener(new View.OnClickListener() {
             @Override
