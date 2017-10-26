@@ -10,8 +10,8 @@
 		51727E271F93230B002E1921 /* Sighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51727E261F93230B002E1921 /* Sighting.swift */; };
 		51727E291F932580002E1921 /* SightingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51727E281F932580002E1921 /* SightingTableViewCell.swift */; };
 		51727E2B1F932791002E1921 /* SightingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51727E2A1F932791002E1921 /* SightingTableViewController.swift */; };
-		51727E2E1F932ADA002E1921 /* Rat_Sightings_SHORTENED.csv in Resources */ = {isa = PBXBuildFile; fileRef = 51727E2D1F932ADA002E1921 /* Rat_Sightings_SHORTENED.csv */; };
 		80CF784F0FDDAD9F7D28C0B7 /* Pods_RatFinder_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E645C60D416741A3B76F7D0 /* Pods_RatFinder_ios.framework */; };
+		970B06F01F95B936000B411A /* RatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970B06EF1F95B936000B411A /* RatViewController.swift */; };
 		970E4E961F82BFBD006A44D3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 970E4E951F82BFBD006A44D3 /* Default-568h@2x.png */; };
 		971F1EA01F8C31C4001C75AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 973729E61F8B0FEF007C6E34 /* GoogleService-Info.plist */; };
 		973979191F7070E500433DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973979181F7070E500433DB3 /* AppDelegate.swift */; };
@@ -19,10 +19,7 @@
 		9739791E1F7070E500433DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9739791C1F7070E500433DB3 /* Main.storyboard */; };
 		973979231F7070E500433DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973979221F7070E500433DB3 /* Assets.xcassets */; };
 		973979261F7070E500433DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973979241F7070E500433DB3 /* LaunchScreen.storyboard */; };
-		973979311F7070E500433DB3 /* RatFinder_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973979301F7070E500433DB3 /* RatFinder_iosTests.swift */; };
-		9739793C1F7070E500433DB3 /* RatFinder_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739793B1F7070E500433DB3 /* RatFinder_iosUITests.swift */; };
 		9747D9BF1F7F3E0500DFB303 /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */; };
-		97A41B101F79836300AA4DDE /* HomePageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A41B0F1F79836300AA4DDE /* HomePageTableViewController.swift */; };
 		97A41B121F79845D00AA4DDE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */; };
 		97BA2D1E1F8AD3AD00AEC4A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA2D1D1F8AD3AD00AEC4A5 /* SettingsViewController.swift */; };
 		A437B7F917D521ECE24D1767 /* Pods_RatFinder_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160F75BE323B3227E15D3572 /* Pods_RatFinder_iosUITests.framework */; };
@@ -54,14 +51,12 @@
 		51727E261F93230B002E1921 /* Sighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sighting.swift; sourceTree = "<group>"; };
 		51727E281F932580002E1921 /* SightingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightingTableViewCell.swift; sourceTree = "<group>"; };
 		51727E2A1F932791002E1921 /* SightingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightingTableViewController.swift; sourceTree = "<group>"; };
-		51727E2D1F932ADA002E1921 /* Rat_Sightings_SHORTENED.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Rat_Sightings_SHORTENED.csv; path = ../../../../../../Desktop/Rat_Sightings_SHORTENED.csv; sourceTree = "<group>"; };
 		5E0C7E191ECAFC1AAE5BEE49 /* Pods-RatFinder_iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatFinder_iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RatFinder_iosTests/Pods-RatFinder_iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7468486A2278D3C9A58703AA /* Pods_RatFinder_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatFinder_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		790A24237EBA5B1F729906C6 /* Pods-RatFinder_iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatFinder_iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RatFinder_iosTests/Pods-RatFinder_iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		970B06EF1F95B936000B411A /* RatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatViewController.swift; sourceTree = "<group>"; };
 		970E4E951F82BFBD006A44D3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		971F1E9D1F8C2588001C75AF /* RatFinder_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RatFinder_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		971F1E9E1F8C2588001C75AF /* RatFinder_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatFinder_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		971F1E9F1F8C2588001C75AF /* RatFinder_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatFinder_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		973729E61F8B0FEF007C6E34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		973979181F7070E500433DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9739791A1F7070E500433DB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -69,14 +64,11 @@
 		973979221F7070E500433DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		973979251F7070E500433DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		973979271F7070E500433DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		973979301F7070E500433DB3 /* RatFinder_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatFinder_iosTests.swift; sourceTree = "<group>"; };
-		973979321F7070E500433DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9739793B1F7070E500433DB3 /* RatFinder_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatFinder_iosUITests.swift; sourceTree = "<group>"; };
-		9739793D1F7070E500433DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
-		97A41B0F1F79836300AA4DDE /* HomePageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableViewController.swift; sourceTree = "<group>"; };
 		97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		97BA2D1D1F8AD3AD00AEC4A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		97DC16631FA13D650087B5B8 /* RatFinder_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RatFinder_iosTests.xctest; path = "/Users/kedar/Gatech/Fall 2017/cs2340/CS2340_Team10/RatFinder_ios/build/Debug-iphoneos/RatFinder_iosTests.xctest"; sourceTree = "<absolute>"; };
+		97DC16641FA13D650087B5B8 /* RatFinder_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RatFinder_iosUITests.xctest; path = "/Users/kedar/Gatech/Fall 2017/cs2340/CS2340_Team10/RatFinder_ios/build/Debug-iphoneos/RatFinder_iosUITests.xctest"; sourceTree = "<absolute>"; };
 		C508FD8F7ACF022FC3F3DEEB /* Pods-RatFinder_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatFinder_ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-RatFinder_ios/Pods-RatFinder_ios.release.xcconfig"; sourceTree = "<group>"; };
 		E1391AE6D3B12B9BFEE1E9B3 /* Pods-RatFinder_iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatFinder_iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RatFinder_iosUITests/Pods-RatFinder_iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,7 +122,6 @@
 		51727E2C1F932A68002E1921 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				51727E2D1F932ADA002E1921 /* Rat_Sightings_SHORTENED.csv */,
 			);
 			name = Assets;
 			path = "New Group";
@@ -155,13 +146,9 @@
 				51727E2C1F932A68002E1921 /* Assets */,
 				970E4E951F82BFBD006A44D3 /* Default-568h@2x.png */,
 				973979171F7070E500433DB3 /* RatFinder_ios */,
-				9739792F1F7070E500433DB3 /* RatFinder_iosTests */,
-				9739793A1F7070E500433DB3 /* RatFinder_iosUITests */,
 				8E01243108FF92DB77F309D5 /* Pods */,
 				4687AB07989786C8BB0DD36C /* Frameworks */,
 				971F1E9D1F8C2588001C75AF /* RatFinder_ios.app */,
-				971F1E9E1F8C2588001C75AF /* RatFinder_iosTests.xctest */,
-				971F1E9F1F8C2588001C75AF /* RatFinder_iosUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,31 +164,13 @@
 			path = RatFinder_ios;
 			sourceTree = "<group>";
 		};
-		9739792F1F7070E500433DB3 /* RatFinder_iosTests */ = {
-			isa = PBXGroup;
-			children = (
-				973979301F7070E500433DB3 /* RatFinder_iosTests.swift */,
-				973979321F7070E500433DB3 /* Info.plist */,
-			);
-			path = RatFinder_iosTests;
-			sourceTree = "<group>";
-		};
-		9739793A1F7070E500433DB3 /* RatFinder_iosUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9739793B1F7070E500433DB3 /* RatFinder_iosUITests.swift */,
-				9739793D1F7070E500433DB3 /* Info.plist */,
-			);
-			path = RatFinder_iosUITests;
-			sourceTree = "<group>";
-		};
 		97DF23A11F82BED800F8A71F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				9739791A1F7070E500433DB3 /* LoginViewController.swift */,
 				97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */,
 				97BA2D1D1F8AD3AD00AEC4A5 /* SettingsViewController.swift */,
-				97A41B0F1F79836300AA4DDE /* HomePageTableViewController.swift */,
+				970B06EF1F95B936000B411A /* RatViewController.swift */,
 				9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */,
 				51727E281F932580002E1921 /* SightingTableViewCell.swift */,
 				51727E2A1F932791002E1921 /* SightingTableViewController.swift */,
@@ -261,7 +230,7 @@
 			);
 			name = RatFinder_iosTests;
 			productName = RatFinder_iosTests;
-			productReference = 971F1E9E1F8C2588001C75AF /* RatFinder_iosTests.xctest */;
+			productReference = 97DC16631FA13D650087B5B8 /* RatFinder_iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		973979361F7070E500433DB3 /* RatFinder_iosUITests */ = {
@@ -282,7 +251,7 @@
 			);
 			name = RatFinder_iosUITests;
 			productName = RatFinder_iosUITests;
-			productReference = 971F1E9F1F8C2588001C75AF /* RatFinder_iosUITests.xctest */;
+			productReference = 97DC16641FA13D650087B5B8 /* RatFinder_iosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -346,7 +315,6 @@
 				970E4E961F82BFBD006A44D3 /* Default-568h@2x.png in Resources */,
 				971F1EA01F8C31C4001C75AF /* GoogleService-Info.plist in Resources */,
 				973979231F7070E500433DB3 /* Assets.xcassets in Resources */,
-				51727E2E1F932ADA002E1921 /* Rat_Sightings_SHORTENED.csv in Resources */,
 				9739791E1F7070E500433DB3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,12 +360,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-RatFinder_ios/Pods-RatFinder_ios-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,7 +496,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97A41B101F79836300AA4DDE /* HomePageTableViewController.swift in Sources */,
 				9739791B1F7070E500433DB3 /* LoginViewController.swift in Sources */,
 				51727E271F93230B002E1921 /* Sighting.swift in Sources */,
 				97A41B121F79845D00AA4DDE /* RegistrationViewController.swift in Sources */,
@@ -534,6 +503,7 @@
 				9747D9BF1F7F3E0500DFB303 /* DismissKeyboard.swift in Sources */,
 				51727E291F932580002E1921 /* SightingTableViewCell.swift in Sources */,
 				97BA2D1E1F8AD3AD00AEC4A5 /* SettingsViewController.swift in Sources */,
+				970B06F01F95B936000B411A /* RatViewController.swift in Sources */,
 				51727E2B1F932791002E1921 /* SightingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,7 +512,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				973979311F7070E500433DB3 /* RatFinder_iosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,7 +519,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9739793C1F7070E500433DB3 /* RatFinder_iosUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
