@@ -15,12 +15,11 @@ class SightingTableViewCell: UITableViewCell {
     @IBOutlet weak var createdDate: UILabel!
     @IBOutlet weak var incidentAddress: UILabel!
     
-    @IBOutlet weak var coordinates: UILabel!
-    @IBOutlet weak var locationType: UILabel!
-    @IBOutlet weak var borough: UILabel!
-    @IBOutlet weak var city: UILabel!
-    @IBOutlet weak var locationZip: UILabel!
-    @IBOutlet weak var uniqueKey: UILabel!
+//    @IBOutlet weak var coordinates: UILabel!
+//    @IBOutlet weak var locationType: UILabel!
+//    @IBOutlet weak var borough: UILabel!
+//    @IBOutlet weak var city: UILabel!
+//    @IBOutlet weak var locationZip: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

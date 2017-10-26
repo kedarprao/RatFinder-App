@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "39BF398E9A42A8950FCA243BB9EF244D"
+               BlueprintIdentifier = "360A19DEF0447159BE9FC0DB68C56040"
                BuildableName = "Pods_RatFinder_ios.framework"
                BlueprintName = "Pods-RatFinder_ios"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "39BF398E9A42A8950FCA243BB9EF244D"
+            BlueprintIdentifier = "360A19DEF0447159BE9FC0DB68C56040"
             BuildableName = "Pods_RatFinder_ios.framework"
             BlueprintName = "Pods-RatFinder_ios"
             ReferencedContainer = "container:Pods.xcodeproj">
