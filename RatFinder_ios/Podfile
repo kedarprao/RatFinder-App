@@ -9,6 +9,7 @@ target 'RatFinder_ios' do
 pod 'Firebase/Core'
 pod 'Firebase'
 pod 'Firebase/Auth'
+pod 'Firebase/Database'
 
   # Pods for RatFinder_ios
 

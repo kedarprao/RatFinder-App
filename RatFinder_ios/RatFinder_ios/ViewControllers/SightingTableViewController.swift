@@ -6,58 +6,52 @@
 //  Copyright © 2017 Kedar Rao. All rights reserved.
 //
 import UIKit
+import Firebase
 
 class SightingTableViewController: UITableViewController {
     
     //MARK: Properties
-    var sightings = [Sighting]()
-    let csvFileName = "Rat_Sightings_SHORTENED"
-    let maxSightingsDisplayed = 15
+    var sightingsList = [Sighting]()
+    var refRats: DatabaseReference!
     
     //Mark: Private Methods
-    
-    
-    private func loadCsvSightings() {
-
-        if let path = Bundle.main.path(forResource: csvFileName, ofType: "csv") {
-            print(path)
-            do {
-                let csvFileContents = try String(contentsOfFile: path)
-                let lines = csvFileContents.components(separatedBy: "\n")
-                
-                for (index, line) in lines.enumerated() {
-                    if index != 0 && index <= maxSightingsDisplayed {
-                        sightings.append(Sighting(csvLine: line))
-                        
-                    }
-                }
-                
-            }
-            catch {/* error handling here */}
-            
-            
-            
-            
-        }
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadCsvSightings()
-        
+        refRats = Database.database().reference()
+        //Fetch values from FireBase
+        refRats.observe(DataEventType.value, with: { (snapshot) in
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+            //if the reference have some values
+            if snapshot.childrenCount > 0 {
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+                //clearing the list
+                self.sightingsList.removeAll()
+
+                //iterating through all the values
+                for ratSighting in snapshot.children.allObjects as! [DataSnapshot] {
+                    //getting values
+                    let ratObject = ratSighting.value as? [String: AnyObject]
+                    let createdDate = ratObject?["Created Date"]
+                    let incidentAddress  = ratObject?["Incident Address"]
+
+                    //creating sighting object with model and fetched valu
+                   let sighting = Sighting(createdDate: createdDate as! String?, incidentAddress: incidentAddress as! String?)
+                    //appending it to list
+                    self.sightingsList.append(sighting)
+                }
+
+                //reloading the tableview
+                self.tableView.reloadData()
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,82 +59,23 @@ class SightingTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return sightings.count
+        return sightingsList.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "SightingTableViewCell"
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SightingTableViewCell  else {
             fatalError("The dequeued cell is not an instance of SightingTableViewCell.")
         }
-
-        let sighting = sightings[indexPath.row]
         
+        //getting the sighting of selected position
+        let sighting = sightingsList[indexPath.row]
+        //adding values to labels
         cell.createdDate.text = sighting.createdDate
         cell.incidentAddress.text = sighting.incidentAddress
-        
-        cell.locationType.text = "Location Type: " + sighting.children["locationType"]!
-        cell.locationZip.text = "Location Zip: " + sighting.children["incidentZip"]!
-        cell.borough.text = "Borough: " + sighting.children["borough"]!
-        cell.city.text = "City: " + sighting.children["city"]!
-        
-        let x = sighting.children["latitude"]!
-        let y = sighting.children["longitude"]!
-        let index = x.index(x.startIndex, offsetBy: 4)
-
-        cell.coordinates.text = "(" + x + ", " + y + ")"
-        cell.uniqueKey.text = "Unique Key: " + sighting.children["uniqueKey"]!
-        
+    
         return cell
     }
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
