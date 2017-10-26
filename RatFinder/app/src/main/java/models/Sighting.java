@@ -3,6 +3,8 @@ package models;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
+import edu.gatech.krao9.ratfinder.Rat;
+
 public class Sighting {
     private String uniqueKey;
     private String createdDate;
@@ -20,6 +22,22 @@ public class Sighting {
     public Sighting() {
         children = new LinkedHashMap<String, String>();
     }
+
+    public Sighting(Rat rat) {
+        children = new LinkedHashMap<String, String>();
+        this.setUniqueKey("" + rat.getUniqueKey());
+        this.setCreatedDate(rat.getCreatedDate().toString());
+        this.setLocationType(rat.getLocationType());
+        this.setIncidentZip("" + rat.getIncidentZip());
+        this.setIncidentAddress(rat.getIncidentAddress());
+        this.setCity(rat.getCity());
+        this.setBorough(rat.getBorough());
+        this.setLatitude("" + rat.getLatitude());
+        this.setLongitude("" + rat.getLongitude());
+
+
+    }
+
 
     public Sighting(String csvLine) {
         children = new LinkedHashMap<String, String>();

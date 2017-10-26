@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "402779344129",
+    "firebase_url": "https://rat-app-2340t10.firebaseio.com",
+    "project_id": "rat-app-2340t10",
+    "storage_bucket": "rat-app-2340t10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402779344129:android:50622e4172711c36",
+        "android_client_info": {
+          "package_name": "edu.gatech.krao9.ratfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402779344129-m2q3j8j2kgr9h8m1vkqg2nnf0pg3ruv6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.gatech.krao9.ratfinder",
+            "certificate_hash": "410b8f09f5152a00a07621739680fdb0f68845c6"
+          }
+        },
+        {
+          "client_id": "402779344129-vdv6c2b91g08ovt008cqb7baqt88m656.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAeMn9eB79xVl2hREOan3y5SgIbMD9CvE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402779344129-f4js1nl1r8f7mkc0l86ngnlfq1fsrsnj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.krao.RatFinder-ios"
+              }
+            },
+            {
+              "client_id": "402779344129-vdv6c2b91g08ovt008cqb7baqt88m656.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

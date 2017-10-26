@@ -15,6 +15,7 @@ import android.widget.ExpandableListView;
 import android.widget.ListView;
 
 import adapters.SightingsExpandableListAdapter;
+import models.Sighting;
 
 
 public class HomeScreen extends AppCompatActivity {
@@ -25,6 +26,15 @@ public class HomeScreen extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         final Button logoutButton = (Button) findViewById(R.id.logout_button);
+        final Button addNewRatButton = (Button) findViewById(R.id.addRat_button);
+
+        addNewRatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeScreen.this, NewRatSightingActivity.class));
+            }
+        });
+
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,7 +45,10 @@ public class HomeScreen extends AppCompatActivity {
 
         SightingsExpandableListAdapter adapter = new SightingsExpandableListAdapter(this);
 
-          
+        Rat r = (Rat) getIntent().getSerializableExtra("NEW_RAT");
+        if (r != null) {
+            adapter.addSighting(new Sighting(r));
+        }
         adapter.addSightingsFromCsv(this, "Rat_Sightings.csv");
 
 

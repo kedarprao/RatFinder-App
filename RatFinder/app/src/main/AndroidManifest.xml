@@ -23,6 +23,7 @@
         <activity android:name=".HomeScreen"></activity>
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".RegistrationActivity"></activity>
+        <activity android:name=".NewRatSightingActivity"></activity>
     </application>
 
 </manifest>

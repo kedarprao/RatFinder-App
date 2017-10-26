@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
     <TextView
         android:id="@+id/textView"
@@ -13,7 +14,11 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:text="Rat Sightings"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -22,26 +27,30 @@
     <ExpandableListView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/ratListView"
         android:layout_width="wrap_content"
+        android:layout_height="368dp"
+        android:groupIndicator="@null"
+        android:layout_weight="0.93" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:groupIndicator="@null"/>
-
-
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_alignParentBottom="true">
 
         <Button
             android:id="@+id/logout_button"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_row="29"
-            android:background="@color/colorPrimary"
-            android:text="Log Out"
-            android:textColor="#FFFFFF" />
+            android:layout_weight="1"
+            android:text="Log Out"></Button>
 
-    </GridLayout>
+        <Button
+            android:id="@+id/addRat_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Rat"></Button>
+    </LinearLayout>
 
 
 </LinearLayout>
