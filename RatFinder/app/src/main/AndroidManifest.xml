@@ -3,7 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="edu.gatech.krao9.ratfinder">
 
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
 
     <application
         android:allowBackup="true"
@@ -19,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".HomeScreen" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrationActivity" />
@@ -26,6 +33,15 @@
         <activity android:name=".MapActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".RatListActivity"></activity>
+      
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDOE6RGNdqcYr78UN9jUSYPdy-fOQa4J48"/>
+
     </application>
 
 </manifest>

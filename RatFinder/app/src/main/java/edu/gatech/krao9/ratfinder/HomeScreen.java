@@ -33,6 +33,7 @@ public class HomeScreen extends ActivityGroup {
         TabHost.TabSpec tab2 = tabHost.newTabSpec("Second Tab");
         TabHost.TabSpec tab3 = tabHost.newTabSpec("Third Tab");
 
+
         tab1.setIndicator("Home");
         tab1.setContent(new Intent(this,RatListActivity.class));
 
