@@ -1,5 +1,6 @@
 package edu.gatech.krao9.ratfinder;
 
+import android.app.ActivityGroup;
 import android.content.Intent;
 import android.os.Bundle;
 //import android.support.design.widget.FloatingActionButton;
@@ -13,47 +14,36 @@ import android.widget.Button;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ListView;
+import android.widget.TabHost;
 
 import adapters.SightingsExpandableListAdapter;
 import models.Sighting;
 
 
-public class HomeScreen extends AppCompatActivity {
+public class HomeScreen extends ActivityGroup {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        final Button logoutButton = (Button) findViewById(R.id.logout_button);
-        final Button addNewRatButton = (Button) findViewById(R.id.addRat_button);
+        TabHost tabHost = (TabHost)findViewById(R.id.tabHost);
+        tabHost.setup(this.getLocalActivityManager());
+        TabHost.TabSpec tab1 = tabHost.newTabSpec("First Tab");
+        TabHost.TabSpec tab2 = tabHost.newTabSpec("Second Tab");
+        TabHost.TabSpec tab3 = tabHost.newTabSpec("Third Tab");
 
-        addNewRatButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(HomeScreen.this, NewRatSightingActivity.class));
-            }
-        });
+        tab1.setIndicator("Home");
+        tab1.setContent(new Intent(this,RatListActivity.class));
 
-        logoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(HomeScreen.this, StartupActivity.class));
-            }
-        });
+        tab2.setIndicator("Map");
+        tab2.setContent(new Intent(this,MapActivity.class));
 
+        tab3.setIndicator("Settings");
+        tab3.setContent(new Intent(this,SettingsActivity.class));
 
-        SightingsExpandableListAdapter adapter = new SightingsExpandableListAdapter(this);
-
-        Rat r = (Rat) getIntent().getSerializableExtra("NEW_RAT");
-        if (r != null) {
-            adapter.addSighting(new Sighting(r));
-        }
-        adapter.addSightingsFromCsv(this, "Rat_Sightings.csv");
-
-
-        ExpandableListView sightingsLV = (ExpandableListView) findViewById(R.id.ratListView);
-        sightingsLV.setAdapter(adapter);
-
+        tabHost.addTab(tab1);
+        tabHost.addTab(tab2);
+        tabHost.addTab(tab3);
     }
 }
