@@ -8,61 +8,83 @@
 import UIKit
 import Firebase
 
-class SightingTableViewController: UITableViewController {
+class SightingTableViewController: UITableViewController
+{
     
     //MARK: Properties
     var sightingsList = [Sighting]()
-    var refRats: DatabaseReference!
     
     //Mark: Private Methods
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
-        refRats = Database.database().reference()
-        //Fetch values from FireBase
-        refRats.observe(DataEventType.value, with: { (snapshot) in
+        getRats() // goes to firebase and gets Rats
+    }
 
+    func getRats()
+    {
+        //Fetch values from FireBase
+        let refRats = Database.database().reference()
+        
+        //refRats.observeSingleEvent(of: DataEventType.value, with: { (snapshot) in
+        refRats.observe(DataEventType.value, with: { (snapshot) in
+            
             //if the reference have some values
             if snapshot.childrenCount > 0 {
-
+                print(snapshot.childrenCount)
                 //clearing the list
                 self.sightingsList.removeAll()
-
+                
                 //iterating through all the values
                 for ratSighting in snapshot.children.allObjects as! [DataSnapshot] {
                     //getting values
                     let ratObject = ratSighting.value as? [String: AnyObject]
                     let createdDate = ratObject?["Created Date"]
                     let incidentAddress  = ratObject?["Incident Address"]
-
+                    
                     //creating sighting object with model and fetched valu
-                   let sighting = Sighting(createdDate: createdDate as! String?, incidentAddress: incidentAddress as! String?)
+                    let sighting = Sighting(createdDate: createdDate as! String?, incidentAddress: incidentAddress as! String?)
                     //appending it to list
                     self.sightingsList.append(sighting)
                 }
-
+                
                 //reloading the tableview
                 self.tableView.reloadData()
             }
         })
     }
-
-    override func didReceiveMemoryWarning() {
+    
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Table view data source
+    
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool)
+    {
+        let currentOffset = scrollView.contentOffset.y
+        let maxOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        if maxOffset - currentOffset < 40 {
+            getRats()
+        }
+    }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int
+    {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return sightingsList.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         let cellIdentifier = "SightingTableViewCell"
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SightingTableViewCell  else {

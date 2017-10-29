@@ -22,6 +22,8 @@
 		9747D9BF1F7F3E0500DFB303 /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */; };
 		97A41B121F79845D00AA4DDE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */; };
 		97BA2D1E1F8AD3AD00AEC4A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA2D1D1F8AD3AD00AEC4A5 /* SettingsViewController.swift */; };
+		97DC16901FA672DF0087B5B8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC168F1FA672DF0087B5B8 /* MapViewController.swift */; };
+		97DC16921FA673FE0087B5B8 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC16911FA673FE0087B5B8 /* Pin.swift */; };
 		A437B7F917D521ECE24D1767 /* Pods_RatFinder_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160F75BE323B3227E15D3572 /* Pods_RatFinder_iosUITests.framework */; };
 		CBAFCF21AA651040D6EE3575 /* Pods_RatFinder_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7468486A2278D3C9A58703AA /* Pods_RatFinder_iosTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,8 +69,10 @@
 		9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		97BA2D1D1F8AD3AD00AEC4A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		97DC16631FA13D650087B5B8 /* RatFinder_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RatFinder_iosTests.xctest; path = "/Users/kedar/Gatech/Fall 2017/cs2340/CS2340_Team10/RatFinder_ios/build/Debug-iphoneos/RatFinder_iosTests.xctest"; sourceTree = "<absolute>"; };
-		97DC16641FA13D650087B5B8 /* RatFinder_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RatFinder_iosUITests.xctest; path = "/Users/kedar/Gatech/Fall 2017/cs2340/CS2340_Team10/RatFinder_ios/build/Debug-iphoneos/RatFinder_iosUITests.xctest"; sourceTree = "<absolute>"; };
+		97DC167A1FA2637D0087B5B8 /* RatFinder_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatFinder_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97DC167B1FA2637D0087B5B8 /* RatFinder_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatFinder_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97DC168F1FA672DF0087B5B8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		97DC16911FA673FE0087B5B8 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		C508FD8F7ACF022FC3F3DEEB /* Pods-RatFinder_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatFinder_ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-RatFinder_ios/Pods-RatFinder_ios.release.xcconfig"; sourceTree = "<group>"; };
 		E1391AE6D3B12B9BFEE1E9B3 /* Pods-RatFinder_iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatFinder_iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RatFinder_iosUITests/Pods-RatFinder_iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +153,8 @@
 				8E01243108FF92DB77F309D5 /* Pods */,
 				4687AB07989786C8BB0DD36C /* Frameworks */,
 				971F1E9D1F8C2588001C75AF /* RatFinder_ios.app */,
+				97DC167A1FA2637D0087B5B8 /* RatFinder_iosTests.xctest */,
+				97DC167B1FA2637D0087B5B8 /* RatFinder_iosUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,9 +177,11 @@
 				97A41B111F79845D00AA4DDE /* RegistrationViewController.swift */,
 				97BA2D1D1F8AD3AD00AEC4A5 /* SettingsViewController.swift */,
 				970B06EF1F95B936000B411A /* RatViewController.swift */,
+				97DC168F1FA672DF0087B5B8 /* MapViewController.swift */,
 				9747D9BE1F7F3E0500DFB303 /* DismissKeyboard.swift */,
 				51727E281F932580002E1921 /* SightingTableViewCell.swift */,
 				51727E2A1F932791002E1921 /* SightingTableViewController.swift */,
+				97DC16911FA673FE0087B5B8 /* Pin.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -230,7 +238,7 @@
 			);
 			name = RatFinder_iosTests;
 			productName = RatFinder_iosTests;
-			productReference = 97DC16631FA13D650087B5B8 /* RatFinder_iosTests.xctest */;
+			productReference = 97DC167A1FA2637D0087B5B8 /* RatFinder_iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		973979361F7070E500433DB3 /* RatFinder_iosUITests */ = {
@@ -251,7 +259,7 @@
 			);
 			name = RatFinder_iosUITests;
 			productName = RatFinder_iosUITests;
-			productReference = 97DC16641FA13D650087B5B8 /* RatFinder_iosUITests.xctest */;
+			productReference = 97DC167B1FA2637D0087B5B8 /* RatFinder_iosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -497,8 +505,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9739791B1F7070E500433DB3 /* LoginViewController.swift in Sources */,
+				97DC16921FA673FE0087B5B8 /* Pin.swift in Sources */,
 				51727E271F93230B002E1921 /* Sighting.swift in Sources */,
 				97A41B121F79845D00AA4DDE /* RegistrationViewController.swift in Sources */,
+				97DC16901FA672DF0087B5B8 /* MapViewController.swift in Sources */,
 				973979191F7070E500433DB3 /* AppDelegate.swift in Sources */,
 				9747D9BF1F7F3E0500DFB303 /* DismissKeyboard.swift in Sources */,
 				51727E291F932580002E1921 /* SightingTableViewCell.swift in Sources */,
