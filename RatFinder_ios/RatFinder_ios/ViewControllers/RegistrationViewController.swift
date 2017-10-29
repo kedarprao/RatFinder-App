@@ -9,15 +9,18 @@
 import UIKit
 import Firebase
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UIViewController
+{
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.hideKeyboard()
     }
     
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -26,12 +29,14 @@ class RegistrationViewController: UIViewController {
     @IBOutlet var passwordText: UITextField!
     @IBOutlet var confirmPasswordText: UITextField!
     
-    func isPasswordValid(_ password : String) -> Bool{
+    func isPasswordValid(_ password : String) -> Bool
+    {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
         return passwordTest.evaluate(with: password)
     }
     
-    @IBAction func createANewUser(_ sender: UIButton) {
+    @IBAction func createANewUser(_ sender: UIButton)
+    {
         guard let email = emailText.text, let password = passwordText.text, let confirmPassword = confirmPasswordText.text else { return }
         if isPasswordValid(password) && password == confirmPassword {
             Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
