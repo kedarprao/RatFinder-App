@@ -61,6 +61,9 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * check user login creditals
+     */
     public void checkLogin() {
         String username = ((EditText) findViewById(R.id.Username)).getText().toString();
         String password = ((EditText) findViewById(R.id.Password)).getText().toString();
