@@ -138,12 +138,15 @@
         <!--Map-->
         <scene sceneID="afH-ra-0ed">
             <objects>
-                <viewController title="Map" id="FtI-M3-Nmf" sceneMemberID="viewController">
+                <viewController title="Map" id="FtI-M3-Nmf" customClass="MapViewController" customModule="RatFinder_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="xwy-hE-PCB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </mapView>
                     <tabBarItem key="tabBarItem" title="Map" image="icons8-map_marker_filled" landscapeImage="icons8-map_marker_filled" selectedImage="icons8-map_marker_filled" id="LV6-72-9lh"/>
+                    <connections>
+                        <outlet property="mapView" destination="xwy-hE-PCB" id="EQq-S1-yZr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGS-gV-yJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -252,12 +255,14 @@
                                     <navigationItem title="Rattributes!" id="f4P-y6-lS2">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="MHX-jV-Tgo">
                                             <connections>
-                                                <segue destination="ngs-Ev-q5q" kind="show" id="vmS-lo-RZV"/>
+                                                <action selector="cancelPressed:" destination="RfW-yr-SS4" id="nmK-ct-IXY"/>
+                                                <segue destination="izW-VT-qUc" kind="show" id="wMA-P1-lle"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Cth-Qk-0wq">
                                             <connections>
-                                                <segue destination="ngs-Ev-q5q" kind="show" id="dxr-ha-gBH"/>
+                                                <action selector="savePressed:" destination="RfW-yr-SS4" id="EXY-VB-wrj"/>
+                                                <segue destination="izW-VT-qUc" kind="show" id="y8f-JY-939"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -320,52 +325,52 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="ncu-0j-zsf">
-                                        <rect key="frame" x="114" y="55" width="229" height="443"/>
+                                        <rect key="frame" x="114" y="3" width="229" height="547"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10/25/2017" textAlignment="natural" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rz0-9L-dWA">
-                                                <rect key="frame" x="0.0" y="0.0" width="229" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="229" height="43"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Manhattan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m7u-SU-f2t">
-                                                <rect key="frame" x="0.0" y="59" width="229" height="30"/>
+                                                <rect key="frame" x="0.0" y="72" width="229" height="43"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apt. Building" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Pc-da-a3J">
-                                                <rect key="frame" x="0.0" y="118" width="229" height="30"/>
+                                                <rect key="frame" x="0.0" y="144" width="229" height="43"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p4A-7U-7pc">
-                                                <rect key="frame" x="0.0" y="177" width="229" height="30"/>
+                                                <rect key="frame" x="0.0" y="216" width="229" height="43"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jbj-Z2-qHE">
-                                                <rect key="frame" x="0.0" y="236" width="229" height="30"/>
+                                                <rect key="frame" x="0.0" y="288" width="229" height="43"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RDl-Ez-yP5">
-                                                <rect key="frame" x="0.0" y="295" width="229" height="30"/>
+                                                <rect key="frame" x="0.0" y="360" width="229" height="43"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MNn-aR-zY4">
-                                                <rect key="frame" x="0.0" y="354" width="229" height="30"/>
+                                                <rect key="frame" x="0.0" y="432" width="229" height="43"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LUL-7n-6tQ">
-                                                <rect key="frame" x="0.0" y="413" width="229" height="30"/>
+                                                <rect key="frame" x="0.0" y="504" width="229" height="43"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -375,6 +380,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="D7I-EC-OT0" firstAttribute="top" secondItem="IAZ-Dn-l3O" secondAttribute="top" constant="3" id="cjL-EK-Ocx"/>
+                                    <constraint firstAttribute="bottom" secondItem="ncu-0j-zsf" secondAttribute="bottom" constant="3" id="eGg-bO-c2M"/>
+                                    <constraint firstItem="ncu-0j-zsf" firstAttribute="top" secondItem="IAZ-Dn-l3O" secondAttribute="top" constant="3" id="vR7-lA-JMJ"/>
+                                    <constraint firstItem="ncu-0j-zsf" firstAttribute="leading" secondItem="D7I-EC-OT0" secondAttribute="trailing" id="xu8-nf-7Fg"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -555,8 +563,6 @@
         <image name="icons8-settings_filled" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BXd-lM-RI9"/>
-        <segue reference="vmS-lo-RZV"/>
-        <segue reference="461-SL-ZT9"/>
+        <segue reference="y8f-JY-939"/>
     </inferredMetricsTieBreakers>
 </document>

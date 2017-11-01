@@ -9,15 +9,18 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController
+{
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.hideKeyboard()
     }
     
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -25,7 +28,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     
-    @IBAction func loginButton(_ sender: UIButton) {
+    @IBAction func loginButton(_ sender: UIButton)
+    {
         guard let email = emailText.text, let password = passwordText.text else { return }
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error == nil {
