@@ -38,7 +38,7 @@ public class HomeScreen extends ActivityGroup {
         tab1.setContent(new Intent(this,RatListActivity.class));
 
         tab2.setIndicator("Map");
-        tab2.setContent(new Intent(this,MapActivity.class));
+        tab2.setContent(new Intent(this,RatMapActivity.class));
 
         tab3.setIndicator("Settings");
         tab3.setContent(new Intent(this,SettingsActivity.class));
@@ -46,5 +46,6 @@ public class HomeScreen extends ActivityGroup {
         tabHost.addTab(tab1);
         tabHost.addTab(tab2);
         tabHost.addTab(tab3);
+
     }
 }

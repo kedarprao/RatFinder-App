@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "402779344129-7hv0d0ob32ta8g8uf0q10k981aku644a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.gatech.krao9.ratfinder",
+            "certificate_hash": "9af5cc06cd3f08699b35dd8e6936ec0151daed86"
+          }
+        },
+        {
           "client_id": "402779344129-m2q3j8j2kgr9h8m1vkqg2nnf0pg3ruv6.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -40,15 +48,15 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
+              "client_id": "402779344129-vdv6c2b91g08ovt008cqb7baqt88m656.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
               "client_id": "402779344129-f4js1nl1r8f7mkc0l86ngnlfq1fsrsnj.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.krao.RatFinder-ios"
               }
-            },
-            {
-              "client_id": "402779344129-vdv6c2b91g08ovt008cqb7baqt88m656.apps.googleusercontent.com",
-              "client_type": 3
             }
           ]
         },
