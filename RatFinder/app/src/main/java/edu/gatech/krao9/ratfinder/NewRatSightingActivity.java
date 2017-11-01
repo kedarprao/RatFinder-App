@@ -10,6 +10,8 @@ import android.widget.EditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -81,9 +83,17 @@ public class NewRatSightingActivity extends AppCompatActivity {
                 incidentAddress.getText().toString(), city.getText().toString(),
                 borough.getText().toString(), lat, lonng));
 
+        myRef.child("Created Date Int").setValue(convertToQueryFriendlyDate(createdDate));
+
         return new Rat(createdDate, locationType.getText().toString(),
                 Integer.parseInt(incidentZip.getText().toString()),
                 incidentAddress.getText().toString(), city.getText().toString(),
                 borough.getText().toString(), lat, lonng);
+    }
+
+    public int convertToQueryFriendlyDate(Date date) {
+        DateFormat df = new SimpleDateFormat("yyyyMMdd");
+        String y = df.format(date);
+        return Integer.valueOf(y);
     }
 }
