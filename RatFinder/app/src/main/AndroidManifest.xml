@@ -30,7 +30,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".NewRatSightingActivity" />
-        <activity android:name=".MapActivity" />
+        <activity android:name=".RatMapActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".RatListActivity"></activity>
       
@@ -40,7 +40,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDOE6RGNdqcYr78UN9jUSYPdy-fOQa4J48"/>
+            android:value="AIzaSyAAeMn9eB79xVl2hREOan3y5SgIbMD9CvE"/>
 
     </application>
 
