@@ -32,7 +32,7 @@ public class HomeScreen extends ActivityGroup {
         TabHost.TabSpec tab1 = tabHost.newTabSpec("First Tab");
         TabHost.TabSpec tab2 = tabHost.newTabSpec("Second Tab");
         TabHost.TabSpec tab3 = tabHost.newTabSpec("Third Tab");
-
+        TabHost.TabSpec tab4 = tabHost.newTabSpec("Fourth Tab");
 
         tab1.setIndicator("Home");
         tab1.setContent(new Intent(this,RatListActivity.class));
@@ -43,9 +43,13 @@ public class HomeScreen extends ActivityGroup {
         tab3.setIndicator("Settings");
         tab3.setContent(new Intent(this,SettingsActivity.class));
 
+        tab4.setIndicator("Graph");
+        tab4.setContent(new Intent(this,GraphActivity.class));
+
         tabHost.addTab(tab1);
         tabHost.addTab(tab2);
         tabHost.addTab(tab3);
+        tabHost.addTab(tab4);
 
     }
 }
