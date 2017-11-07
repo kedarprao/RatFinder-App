@@ -8,12 +8,14 @@
 import UIKit
 import Firebase
 
+
+
 class SightingTableViewController: UITableViewController
 {
     
     //MARK: Properties
-    var sightingsList = [Sighting]()
-    
+    var sightingsList = [[String : String]]()
+
     //Mark: Private Methods
     override func viewDidLoad()
     {
@@ -39,16 +41,22 @@ class SightingTableViewController: UITableViewController
                 //iterating through all the values
                 for ratSighting in snapshot.children.allObjects as! [DataSnapshot] {
                     //getting values
-                    let ratObject = ratSighting.value as? [String: AnyObject]
-                    let createdDate = ratObject?["Created Date"]
-                    let incidentAddress  = ratObject?["Incident Address"]
+                    let ratObject = ratSighting.value as? [String: String]
+                    let createdDate = ratObject?["createdDate"]
+                    let createdDateInt  = ratObject?["Created Date Int"]
+                    let incidentAddress  = ratObject?["incidentAddress"]
+                    let incidentZip = ratObject?["incidentZip"]
+                    let city  = ratObject?["bity"]
+                    let borough = ratObject?["borough"]
+                    let locationType  = ratObject?["locationType"]
+                    let latitude = ratObject?["latitude"]
+                    let longitude = ratObject?["longitude"]
                     
                     //creating sighting object with model and fetched valu
-                    let sighting = Sighting(createdDate: createdDate as! String?, incidentAddress: incidentAddress as! String?)
-                    //appending it to list
-                    self.sightingsList.append(sighting)
+                    let sighting = Sighting(createdDate: createdDate, createdDateInt: createdDateInt, incidentAddress: incidentAddress, locationType: locationType, incidentZip: incidentZip, city: city, borough: borough, latitude: latitude, longitude: longitude).toDictionary()
+                    //appending it to dict
+                    self.sightingsList.append(sighting as! [String : String])
                 }
-                
                 //reloading the tableview
                 self.tableView.reloadData()
             }
@@ -94,9 +102,8 @@ class SightingTableViewController: UITableViewController
         //getting the sighting of selected position
         let sighting = sightingsList[indexPath.row]
         //adding values to labels
-        cell.createdDate.text = sighting.createdDate
-        cell.incidentAddress.text = sighting.incidentAddress
-    
+        cell.createdDate.text = (sighting["createdDate"])
+        cell.incidentAddress.text = (sighting["incidentAddress"])
         return cell
     }
 

@@ -14,6 +14,8 @@
 		970B06F01F95B936000B411A /* RatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970B06EF1F95B936000B411A /* RatViewController.swift */; };
 		970E4E961F82BFBD006A44D3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 970E4E951F82BFBD006A44D3 /* Default-568h@2x.png */; };
 		971F1EA01F8C31C4001C75AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 973729E61F8B0FEF007C6E34 /* GoogleService-Info.plist */; };
+		972676511FAEA62200DD3EFE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972676501FAEA62200DD3EFE /* CoreLocation.framework */; };
+		972676531FB0240200DD3EFE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972676521FB0240200DD3EFE /* MapKit.framework */; };
 		973979191F7070E500433DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973979181F7070E500433DB3 /* AppDelegate.swift */; };
 		9739791B1F7070E500433DB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739791A1F7070E500433DB3 /* LoginViewController.swift */; };
 		9739791E1F7070E500433DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9739791C1F7070E500433DB3 /* Main.storyboard */; };
@@ -59,6 +61,8 @@
 		970B06EF1F95B936000B411A /* RatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatViewController.swift; sourceTree = "<group>"; };
 		970E4E951F82BFBD006A44D3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		971F1E9D1F8C2588001C75AF /* RatFinder_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RatFinder_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		972676501FAEA62200DD3EFE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		972676521FB0240200DD3EFE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		973729E61F8B0FEF007C6E34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		973979181F7070E500433DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9739791A1F7070E500433DB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				972676531FB0240200DD3EFE /* MapKit.framework in Frameworks */,
+				972676511FAEA62200DD3EFE /* CoreLocation.framework in Frameworks */,
 				80CF784F0FDDAD9F7D28C0B7 /* Pods_RatFinder_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +114,8 @@
 		4687AB07989786C8BB0DD36C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				972676521FB0240200DD3EFE /* MapKit.framework */,
+				972676501FAEA62200DD3EFE /* CoreLocation.framework */,
 				0E645C60D416741A3B76F7D0 /* Pods_RatFinder_ios.framework */,
 				7468486A2278D3C9A58703AA /* Pods_RatFinder_iosTests.framework */,
 				160F75BE323B3227E15D3572 /* Pods_RatFinder_iosUITests.framework */,
@@ -620,6 +628,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -669,6 +678,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
