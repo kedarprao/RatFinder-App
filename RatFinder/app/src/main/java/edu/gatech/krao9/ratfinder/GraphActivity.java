@@ -8,11 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.androidplot.xy.LineAndPointFormatter;
-import com.androidplot.xy.SimpleXYSeries;
-import com.androidplot.xy.XYGraphWidget;
-import com.androidplot.xy.XYPlot;
-import com.androidplot.xy.XYSeries;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,11 +26,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Creates and manages the graph display
+ */
 public class GraphActivity extends AppCompatActivity {
 
     int[] months = new int[12];
     private DatabaseReference database;
-    private XYPlot plot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +44,9 @@ public class GraphActivity extends AppCompatActivity {
         Button setter = (Button) findViewById(R.id.graph_set);
 
 
+        /*
+            Sets the display of the graph once the data is loaded
+         */
         setter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +54,9 @@ public class GraphActivity extends AppCompatActivity {
             }
         });
 
+        /*
+            loads the data
+         */
         display.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,6 +75,9 @@ public class GraphActivity extends AppCompatActivity {
                     quarter = 4;
                 }
 
+                /*
+                    Queries through a given years quarter saving the data to an array
+                 */
                 switch (quarter) {
                     case 1:
                         Query queryM1 = database.orderByChild("Created Date Int")
@@ -251,6 +257,9 @@ public class GraphActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Sets the display of the graph with the proper data
+     */
     public void setGrpah() {
         GraphView graph = (GraphView) findViewById(R.id.graph);
         graph.removeAllSeries();
