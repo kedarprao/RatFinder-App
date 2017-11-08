@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -86,16 +87,25 @@ public class RatMapActivity extends AppCompatActivity implements OnMapReadyCallb
                         Log.d("READER", String.valueOf(dataSnapshot.getChildrenCount()));
                         for (DataSnapshot snapshot: dataSnapshot.getChildren()) {
                             Log.d("READER", snapshot.toString());
-                            if (snapshot.child("Latitude").getValue() != null
-                                    && snapshot.child("Longitude").getValue() != null) {
-                                Log.d("READER", snapshot.child("Latitude").getValue().toString());
-                                Log.d("READER", snapshot.child("Longitude").getValue().toString());
-                                double lat = (Double) snapshot.child("Latitude").getValue();
-                                double loong = (Double) snapshot.child("Longitude").getValue();
+                            if (snapshot.child("latitude").getValue() != null
+                                    && snapshot.child("longitude").getValue() != null) {
+                                Log.d("READER", snapshot.child("latitude").getValue().toString());
+                                Log.d("READER", snapshot.child("longitude").getValue().toString());
+                                double lat = 0;
+                                double loong = 0;
+                                if (!snapshot.child("latitude").getValue().toString().equals("")) {
+                                    lat = Double.parseDouble(snapshot.child("latitude").getValue().toString());
+                                }
+                                if (!snapshot.child("latitude").getValue().toString().equals("")) {
+                                    loong = Double.parseDouble(snapshot.child("longitude").getValue().toString());
+                                }
                                 LatLng newYork = new LatLng(lat, loong);
                                 googleMap.addMarker(new MarkerOptions().position(newYork)
-                                        .title("Unique Key: " + snapshot.child("Unique Key").getValue().toString()
-                                                + "\n" +  snapshot.child("Location Type").getValue().toString()));
+                                        .title("Unique Key: " + snapshot.child("uniqueKey").getValue().toString()));
+//                                Toast.makeText(RatMapActivity.this, "Rat Info:" + "\n"
+//                                                + snapshot.child("uniqueKey").getValue().toString() + "\n"
+//                                                + snapshot.child("locationType").getValue().toString(),
+//                                        Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
