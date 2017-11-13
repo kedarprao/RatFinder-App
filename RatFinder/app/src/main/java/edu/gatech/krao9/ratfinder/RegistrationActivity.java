@@ -34,8 +34,6 @@ public class RegistrationActivity extends AppCompatActivity {
         Button cancelButton = (Button) findViewById(R.id.CancelButton);
         final TextView feedback = (TextView) findViewById(R.id.feedback);
 
-        setAdminLogins();
-
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,6 +49,9 @@ public class RegistrationActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * check if user is logged in
+     */
     @Override
     public void onStart() {
         super.onStart();
@@ -62,12 +63,9 @@ public class RegistrationActivity extends AppCompatActivity {
 
     }
 
-    public void setAdminLogins() {
-        String admin = "admin";
-        String adminPW = "password";
-        validLogins.put(admin.hashCode(), adminPW);
-    }
-
+    /**
+     * register new user with firebase
+     */
     public void registerNewUser() {
         String username = ((EditText) findViewById(R.id.Username)).getText().toString();
         String password = ((EditText) findViewById(R.id.Password)).getText().toString();
@@ -93,9 +91,4 @@ public class RegistrationActivity extends AppCompatActivity {
                     }
                 });
     }
-
-    public static HashMap getValidLogins() {
-        return validLogins;
-    }
-
 }
