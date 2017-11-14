@@ -26,12 +26,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import models.Client;
+
 /**
  * Creates and manages the graph display
  */
 public class GraphActivity extends AppCompatActivity {
 
-    int[] months = new int[12];
+    int[] months = new int[3];
     private DatabaseReference database;
 
     @Override
@@ -62,197 +64,199 @@ public class GraphActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 String start = ((EditText) findViewById(R.id.data_year)).getText().toString();
-                String end = ((EditText) findViewById(R.id.data_year)).getText().toString();
                 String quat = ((EditText) findViewById(R.id.data_quarter)).getText().toString();
-                int quarter = 0;
-                if (quat.equals("Q1")) {
-                    quarter = 1;
-                } else if (quat.equals("Q2")) {
-                    quarter = 2;
-                } else if (quat.equals("Q3")) {
-                    quarter = 3;
-                } else if (quat.equals("Q4")) {
-                    quarter = 4;
-                }
 
-                /*
-                    Queries through a given years quarter saving the data to an array
-                 */
-                switch (quarter) {
-                    case 1:
-                        Query queryM1 = database.orderByChild("Created Date Int")
-                                .startAt(start + "0101").endAt(end + "0131");
-                        queryM1.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                months[0] = (int) dataSnapshot.getChildrenCount();
-                                Log.d("READER", String.valueOf(dataSnapshot.getChildrenCount()));
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                        Query queryM2 = database.orderByChild("Created Date Int")
-                                .startAt(start + "0201").endAt(end + "0228");
-                        queryM2.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                months[1] = (int) dataSnapshot.getChildrenCount();
-                                Log.d("READER", String.valueOf(dataSnapshot.getChildrenCount()));
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                        Query queryM3 = database.orderByChild("Created Date Int")
-                                .startAt(start + "0301").endAt(end + "0331");
-                        queryM3.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                months[2] = (int) dataSnapshot.getChildrenCount();
-                                Log.d("READER", String.valueOf(dataSnapshot.getChildrenCount()));
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                        break;
-                    case 2:
-                        Query queryM4 = database.orderByChild("Created Date Int")
-                                .startAt(start + "0401").endAt(end + "0430");
-                        queryM4.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                months[0] = (int) dataSnapshot.getChildrenCount();
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                        Query queryM5 = database.orderByChild("Created Date Int")
-                                .startAt(start + "0501").endAt(end + "0531");
-                        queryM5.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                months[1] = (int) dataSnapshot.getChildrenCount();
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                        Query queryM6 = database.orderByChild("Created Date Int")
-                                .startAt(start + "0601").endAt(end + "0630");
-                        queryM6.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                months[2] = (int) dataSnapshot.getChildrenCount();
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                        break;
-                    case 3:
-                        Query queryM7 = database.orderByChild("Created Date Int")
-                                .startAt(start + "0701").endAt(end + "0731");
-                        queryM7.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                months[0] = (int) dataSnapshot.getChildrenCount();
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                        Query queryM8 = database.orderByChild("Created Date Int")
-                                .startAt(start + "0801").endAt(end + "0831");
-                        queryM8.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                months[1] = (int) dataSnapshot.getChildrenCount();
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                        Query queryM9 = database.orderByChild("Created Date Int")
-                                .startAt(start + "0901").endAt(end + "0930");
-                        queryM9.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                months[2] = (int) dataSnapshot.getChildrenCount();
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                        break;
-                    case 4:
-                        Query queryM10 = database.orderByChild("Created Date Int")
-                                .startAt(start + "1001").endAt(end + "1031");
-                        queryM10.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                months[0] = (int) dataSnapshot.getChildrenCount();
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                        Query queryM11 = database.orderByChild("Created Date Int")
-                                .startAt(start + "1101").endAt(end + "1130");
-                        queryM11.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                months[1] = (int) dataSnapshot.getChildrenCount();
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                        Query queryM12 = database.orderByChild("Created Date Int")
-                                .startAt(start + "1201").endAt(end + "1231");
-                        queryM12.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                months[2] = (int) dataSnapshot.getChildrenCount();
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                        break;
-                    default:
-                        months[0] = 0;
-                        months[1] = 0;
-                        months[2] = 0;
-                }
-
-                Log.d("READER", String.valueOf(months[0]));
+                Client client = new Client();
+                months = client.getGraphDatapoints(start, quat);
+//                int quarter = 0;
+//                if (quat.equals("Q1")) {
+//                    quarter = 1;
+//                } else if (quat.equals("Q2")) {
+//                    quarter = 2;
+//                } else if (quat.equals("Q3")) {
+//                    quarter = 3;
+//                } else if (quat.equals("Q4")) {
+//                    quarter = 4;
+//                }
+//
+//                /*
+//                    Queries through a given years quarter saving the data to an array
+//                 */
+//                switch (quarter) {
+//                    case 1:
+//                        Query queryM1 = database.orderByChild("Created Date Int")
+//                                .startAt(start + "0101").endAt(end + "0131");
+//                        queryM1.addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(DataSnapshot dataSnapshot) {
+//                                months[0] = (int) dataSnapshot.getChildrenCount();
+//                                Log.d("READER", String.valueOf(dataSnapshot.getChildrenCount()));
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(DatabaseError databaseError) {
+//
+//                            }
+//                        });
+//                        Query queryM2 = database.orderByChild("Created Date Int")
+//                                .startAt(start + "0201").endAt(end + "0228");
+//                        queryM2.addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(DataSnapshot dataSnapshot) {
+//                                months[1] = (int) dataSnapshot.getChildrenCount();
+//                                Log.d("READER", String.valueOf(dataSnapshot.getChildrenCount()));
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(DatabaseError databaseError) {
+//
+//                            }
+//                        });
+//                        Query queryM3 = database.orderByChild("Created Date Int")
+//                                .startAt(start + "0301").endAt(end + "0331");
+//                        queryM3.addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(DataSnapshot dataSnapshot) {
+//                                months[2] = (int) dataSnapshot.getChildrenCount();
+//                                Log.d("READER", String.valueOf(dataSnapshot.getChildrenCount()));
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(DatabaseError databaseError) {
+//
+//                            }
+//                        });
+//                        break;
+//                    case 2:
+//                        Query queryM4 = database.orderByChild("Created Date Int")
+//                                .startAt(start + "0401").endAt(end + "0430");
+//                        queryM4.addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(DataSnapshot dataSnapshot) {
+//                                months[0] = (int) dataSnapshot.getChildrenCount();
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(DatabaseError databaseError) {
+//
+//                            }
+//                        });
+//                        Query queryM5 = database.orderByChild("Created Date Int")
+//                                .startAt(start + "0501").endAt(end + "0531");
+//                        queryM5.addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(DataSnapshot dataSnapshot) {
+//                                months[1] = (int) dataSnapshot.getChildrenCount();
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(DatabaseError databaseError) {
+//
+//                            }
+//                        });
+//                        Query queryM6 = database.orderByChild("Created Date Int")
+//                                .startAt(start + "0601").endAt(end + "0630");
+//                        queryM6.addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(DataSnapshot dataSnapshot) {
+//                                months[2] = (int) dataSnapshot.getChildrenCount();
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(DatabaseError databaseError) {
+//
+//                            }
+//                        });
+//                        break;
+//                    case 3:
+//                        Query queryM7 = database.orderByChild("Created Date Int")
+//                                .startAt(start + "0701").endAt(end + "0731");
+//                        queryM7.addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(DataSnapshot dataSnapshot) {
+//                                months[0] = (int) dataSnapshot.getChildrenCount();
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(DatabaseError databaseError) {
+//
+//                            }
+//                        });
+//                        Query queryM8 = database.orderByChild("Created Date Int")
+//                                .startAt(start + "0801").endAt(end + "0831");
+//                        queryM8.addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(DataSnapshot dataSnapshot) {
+//                                months[1] = (int) dataSnapshot.getChildrenCount();
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(DatabaseError databaseError) {
+//
+//                            }
+//                        });
+//                        Query queryM9 = database.orderByChild("Created Date Int")
+//                                .startAt(start + "0901").endAt(end + "0930");
+//                        queryM9.addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(DataSnapshot dataSnapshot) {
+//                                months[2] = (int) dataSnapshot.getChildrenCount();
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(DatabaseError databaseError) {
+//
+//                            }
+//                        });
+//                        break;
+//                    case 4:
+//                        Query queryM10 = database.orderByChild("Created Date Int")
+//                                .startAt(start + "1001").endAt(end + "1031");
+//                        queryM10.addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(DataSnapshot dataSnapshot) {
+//                                months[0] = (int) dataSnapshot.getChildrenCount();
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(DatabaseError databaseError) {
+//
+//                            }
+//                        });
+//                        Query queryM11 = database.orderByChild("Created Date Int")
+//                                .startAt(start + "1101").endAt(end + "1130");
+//                        queryM11.addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(DataSnapshot dataSnapshot) {
+//                                months[1] = (int) dataSnapshot.getChildrenCount();
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(DatabaseError databaseError) {
+//
+//                            }
+//                        });
+//                        Query queryM12 = database.orderByChild("Created Date Int")
+//                                .startAt(start + "1201").endAt(end + "1231");
+//                        queryM12.addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(DataSnapshot dataSnapshot) {
+//                                months[2] = (int) dataSnapshot.getChildrenCount();
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(DatabaseError databaseError) {
+//
+//                            }
+//                        });
+//                        break;
+//                    default:
+//                        months[0] = 0;
+//                        months[1] = 0;
+//                        months[2] = 0;
+//                }
+//
+//                Log.d("READER", String.valueOf(months[0]));
             }
         });
     }

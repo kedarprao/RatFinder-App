@@ -35,7 +35,6 @@ public class Sighting {
         this.setLatitude("" + rat.getLatitude());
         this.setLongitude("" + rat.getLongitude());
 
-
     }
 
 

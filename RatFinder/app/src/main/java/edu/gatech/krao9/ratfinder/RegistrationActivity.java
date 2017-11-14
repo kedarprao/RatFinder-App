@@ -19,6 +19,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.HashMap;
 
+import models.Client;
+
 public class RegistrationActivity extends AppCompatActivity {
     private static HashMap validLogins = new HashMap<>();
     private FirebaseAuth mAuth;
@@ -38,6 +40,13 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 registerNewUser();
+                FirebaseUser currentUser = mAuth.getCurrentUser();
+                if (currentUser != null) {
+                    startActivity(new Intent(RegistrationActivity.this, HomeScreen.class));
+                } else {
+                    Toast.makeText(RegistrationActivity.this, "Authentication failed.",
+                            Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -69,26 +78,28 @@ public class RegistrationActivity extends AppCompatActivity {
     public void registerNewUser() {
         String username = ((EditText) findViewById(R.id.Username)).getText().toString();
         String password = ((EditText) findViewById(R.id.Password)).getText().toString();
-        final TextView feedback = (TextView) findViewById(R.id.feedback);
-        mAuth.createUserWithEmailAndPassword(username, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d("SIGN UP", "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            startActivity(new Intent(RegistrationActivity.this, LoginActivity.class));
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w("SIGN UP", "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(RegistrationActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            feedback.setText("Failed!");
-                        }
 
-                        // ...
-                    }
-                });
+        Client client = new Client();
+        client.registerNewUser(username, password);
+//        mAuth.createUserWithEmailAndPassword(username, password)
+//                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if (task.isSuccessful()) {
+//                            // Sign in success, update UI with the signed-in user's information
+//                            Log.d("SIGN UP", "createUserWithEmail:success");
+//                            FirebaseUser user = mAuth.getCurrentUser();
+//                            startActivity(new Intent(RegistrationActivity.this, LoginActivity.class));
+//                        } else {
+//                            // If sign in fails, display a message to the user.
+//                            Log.w("SIGN UP", "createUserWithEmail:failure", task.getException());
+//                            Toast.makeText(RegistrationActivity.this, "Authentication failed.",
+//                                    Toast.LENGTH_SHORT).show();
+//                            feedback.setText("Failed!");
+//                        }
+//
+//                        // ...
+//                    }
+//                });
     }
 }

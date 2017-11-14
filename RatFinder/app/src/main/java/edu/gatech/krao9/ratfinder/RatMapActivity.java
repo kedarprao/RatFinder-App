@@ -26,6 +26,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 
+import models.Client;
+
 /**
  *  Map Activity displays Rats centered around New York
  *
@@ -78,43 +80,10 @@ public class RatMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
                 String start = ((EditText) findViewById(R.id.mapFilter_start)).getText().toString();
                 String end = ((EditText) findViewById(R.id.mapFilter_end)).getText().toString();
-                Query query = ratDatabase.orderByChild("Created Date Int")
-                        .startAt(start).endAt(end);
 
-                query.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        Log.d("READER", String.valueOf(dataSnapshot.getChildrenCount()));
-                        for (DataSnapshot snapshot: dataSnapshot.getChildren()) {
-                            Log.d("READER", snapshot.toString());
-                            if (snapshot.child("latitude").getValue() != null
-                                    && snapshot.child("longitude").getValue() != null) {
-                                Log.d("READER", snapshot.child("latitude").getValue().toString());
-                                Log.d("READER", snapshot.child("longitude").getValue().toString());
-                                double lat = 0;
-                                double loong = 0;
-                                if (!snapshot.child("latitude").getValue().toString().equals("")) {
-                                    lat = Double.parseDouble(snapshot.child("latitude").getValue().toString());
-                                }
-                                if (!snapshot.child("latitude").getValue().toString().equals("")) {
-                                    loong = Double.parseDouble(snapshot.child("longitude").getValue().toString());
-                                }
-                                LatLng newYork = new LatLng(lat, loong);
-                                googleMap.addMarker(new MarkerOptions().position(newYork)
-                                        .title("Unique Key: " + snapshot.child("uniqueKey").getValue().toString()));
-//                                Toast.makeText(RatMapActivity.this, "Rat Info:" + "\n"
-//                                                + snapshot.child("uniqueKey").getValue().toString() + "\n"
-//                                                + snapshot.child("locationType").getValue().toString(),
-//                                        Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    }
+                Client cilent = new Client(googleMap);
+                cilent.getMapMarkers(start, end);
 
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        Log.d("READER", "It didnt work");
-                    }
-                });
                 LatLng newYork = new LatLng(40.7128, -74.0060);
 
                 googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(newYork, 8));
@@ -126,7 +95,7 @@ public class RatMapActivity extends AppCompatActivity implements OnMapReadyCallb
          */
         LatLng newYork = new LatLng(40.7128, -74.0060);
         googleMap.addMarker(new MarkerOptions().position(newYork)
-                .title("Center New York"));
+                .title("Center of New York"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(newYork, 8));
     }
 }
