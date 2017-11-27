@@ -382,9 +382,16 @@
                                     <constraint firstItem="D7I-EC-OT0" firstAttribute="top" secondItem="IAZ-Dn-l3O" secondAttribute="top" constant="3" id="cjL-EK-Ocx"/>
                                     <constraint firstAttribute="bottom" secondItem="ncu-0j-zsf" secondAttribute="bottom" constant="3" id="eGg-bO-c2M"/>
                                     <constraint firstItem="ncu-0j-zsf" firstAttribute="top" secondItem="IAZ-Dn-l3O" secondAttribute="top" constant="3" id="vR7-lA-JMJ"/>
-                                    <constraint firstItem="ncu-0j-zsf" firstAttribute="leading" secondItem="D7I-EC-OT0" secondAttribute="trailing" id="xu8-nf-7Fg"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcH-LR-yf5">
+                                <rect key="frame" x="88" y="64" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button:" destination="RfW-yr-SS4" eventType="touchUpInside" id="haN-aF-WNs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -563,6 +570,6 @@
         <image name="icons8-settings_filled" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="y8f-JY-939"/>
+        <segue reference="jlg-10-PPP"/>
     </inferredMetricsTieBreakers>
 </document>

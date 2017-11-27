@@ -8,83 +8,77 @@
 
 import UIKit
 import MapKit
+import Firebase
 
+@available(iOS 11.0, *)
 class MapViewController: UIViewController
 {
     
     @IBOutlet weak var mapView: MKMapView!
+    var sightingsList = [[String : String]]()
     
-    var pins = [Pin]()
-    let pinsKey = "pins"
-    
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         mapView.delegate = self as? MKMapViewDelegate
-        
-        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.addPin))
-        longPressRecognizer.minimumPressDuration = 0.5
-        longPressRecognizer.delaysTouchesBegan = true
-        mapView.addGestureRecognizer(longPressRecognizer)
-        
-        self.addSavedPins()
+        getRats()
+        self.addPins()
     }
     
-    override func didReceiveMemoryWarning()
-    {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
-    {
-        let identifier = "pin"
-        if #available(iOS 11.0, *) {
-            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
-            if annotationView == nil {
-                annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                annotationView?.canShowCallout = true
-            } else {
-                annotationView?.annotation = annotation
-            }
-            return annotationView
-        } else {
-            // Fallback on earlier versions
-            return nil
+
+    func addPins() {
+        for index in 0...25
+        {
+            let sighting = sightingsList[index]
+            let createdDate = sighting["createdDate"]!
+            let incidentAddress = sighting["incidentAddress"]!
+            let latitude = Double(sighting["latitude"]!)!
+            let longitude = Double(sighting["longitude"]!)!
+            let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            let pin = Pin(title: createdDate, subtitle: incidentAddress, coordinate: coordinate)
+            self.mapView.addAnnotation(pin)
         }
     }
     
-    @objc func addPin(longGestureRecognizer: UILongPressGestureRecognizer)
+    func getRats()
     {
-        if longGestureRecognizer.state != .ended {
-            return
-        }
+        //Fetch values from FireBase
+        let refRats = Database.database().reference()
         
-        let location = longGestureRecognizer.location(in: self.mapView)
-        let coordinate = self.mapView.convert(location, toCoordinateFrom: self.mapView)
-        
-        let pin = Pin(coordinate: coordinate)
-        self.saveNewPin(pin)
-        self.mapView.addAnnotation(pin)
-    }
-    
-    func addSavedPins()
-    {
-        if let data = UserDefaults.standard.value(forKey: pinsKey) as? Data {
-            if let savedPins = try? PropertyListDecoder().decode([Pin].self, from: data) {
-                self.pins = savedPins
-                self.mapView.addAnnotations(self.pins)
+        //refRats.observeSingleEvent(of: DataEventType.value, with: { (snapshot) in
+        refRats.observe(DataEventType.value, with: { (snapshot) in
+            
+            //if the reference have some values
+            if snapshot.childrenCount > 0 {
+                print(snapshot.childrenCount)
+                //clearing the list
+                self.sightingsList.removeAll()
+                
+                //iterating through all the values
+                for ratSighting in snapshot.children.allObjects as! [DataSnapshot] {
+                    //getting values
+                    let ratObject = ratSighting.value as? [String: String]
+                    let createdDate = ratObject?["createdDate"]
+                    let createdDateInt  = ratObject?["Created Date Int"]
+                    let incidentAddress  = ratObject?["incidentAddress"]
+                    let incidentZip = ratObject?["incidentZip"]
+                    let city  = ratObject?["bity"]
+                    let borough = ratObject?["borough"]
+                    let locationType  = ratObject?["locationType"]
+                    let latitude = ratObject?["latitude"]
+                    let longitude = ratObject?["longitude"]
+                    
+                    //creating sighting object with model and fetched valu
+                    let sighting = Sighting(createdDate: createdDate, createdDateInt: createdDateInt, incidentAddress: incidentAddress, locationType: locationType, incidentZip: incidentZip, city: city, borough: borough, latitude: latitude, longitude: longitude).toDictionary()
+                    //appending it to dict
+                    self.sightingsList.append(sighting as! [String : String])
+                }
             }
-        }
-    }
-    
-    func saveNewPin(_ pin: Pin)
-    {
-        self.pins.append(pin)
-        UserDefaults.standard.set(try? PropertyListEncoder().encode(self.pins), forKey: pinsKey)
+        })
     }
 }
-
-
