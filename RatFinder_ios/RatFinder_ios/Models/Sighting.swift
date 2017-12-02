@@ -10,6 +10,7 @@ import UIKit
 
 class Sighting {
     var createdDate: String?
+    var createdDateInt: String?
     var incidentAddress: String?
     var locationType: String?
     var incidentZip: String?
@@ -24,11 +25,12 @@ class Sighting {
         self.incidentAddress = incidentAddress
     }
     
-    init(createdDate: String?, incidentAddress: String?, locationType: String?,
+    init(createdDate: String?, createdDateInt: String?, incidentAddress: String?, locationType: String?,
          incidentZip: String?, city: String?, borough: String?, latitude: String?,
          longitude: String?)
     {
         self.createdDate = createdDate
+        self.createdDateInt = createdDateInt
         self.incidentAddress = incidentAddress
         self.locationType = locationType
         self.incidentAddress = incidentAddress
@@ -36,6 +38,19 @@ class Sighting {
         self.borough = borough
         self.latitude = latitude
         self.longitude = longitude
+    }
+    
+    func toDictionary() -> [ String : Any ] {
+        var dict = [ String : Any ]()
+        dict["createdDate"] = self.createdDate
+        dict["Created Date Int"] = self.createdDateInt
+        dict["incidentAddress"] = self.incidentAddress
+        dict["locationType"] = self.locationType
+        dict["city"] = self.city
+        dict["borough"] = self.borough
+        dict["latitude"] = self.latitude
+        dict["longitude"] = self.longitude
+        return dict
     }
 
 //    var children = [String: String]()
